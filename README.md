@@ -1,6 +1,10 @@
 # Intranet Forum
 
+Drupal based intranet forum.
+
 ## Dependencies
+
+## Modules
 
 ## Development Setup
 
