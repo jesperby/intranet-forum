@@ -1,0 +1,36 @@
+body {
+  margin: 2.5em 0 0;
+}
+
+.main-container {
+  margin: 2em;
+}
+
+h1{
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 1.1;
+  margin: .1em 0 .3em;
+}
+
+article {
+  @include columns(6);
+}
+aside {
+  @include columns(3, true);
+}
+
+@media (max-width: 50em) {
+  article {
+    @include columns(6, true);
+  }
+  aside {
+    @include columns(12);
+  }
+}
+
+@media (max-width: 40em) {
+  article {
+    @include columns(12);
+  }
+}
