@@ -18,7 +18,7 @@
     <link rel='icon' type='image/x-icon' href='//assets.malmo.se/internal/3.0/favicon.ico'/>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
-    <div class='app-title'><a href='<?php $site_name;  ?>'><?php print $head_title_array['name'];  ?></a></div>
+    <div class='app-title'><a href='<?php print url('<front>')  ?>'><?php print $head_title_array['name'];  ?></a></div>
 
     <?php print $page_top; ?>
     <?php print $page; ?>

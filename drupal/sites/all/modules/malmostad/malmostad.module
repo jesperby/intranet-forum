@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Malmostad feature.
+ */
+
+include_once 'malmostad.features.inc';
