@@ -2,7 +2,6 @@
 
 function komin_preprocess_html(&$variables) {
 
-
   $variables['site_name'] = variable_get('site_frontpage', url());
 
   $theme_path = url(drupal_get_path('theme', 'komin'));
@@ -10,5 +9,6 @@ function komin_preprocess_html(&$variables) {
   $variables['komin_style'] = $theme_path . '/css/application.css';
   $variables['komin_script'] = $theme_path . '/js/application.js';
 
-
+  // Set development class
+  $variables['classes_array'][] = 'development';
 }
