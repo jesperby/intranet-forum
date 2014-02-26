@@ -6,3 +6,28 @@
 @import 'layout';
 @import 'variables';
 @import 'boxes';
+
+.wrapper {
+  @include clearfix();
+  max-width: 75em;
+  margin: 1em auto;
+}
+
+.breadcrumb {
+    margin-bottom:2em;
+}
+
+/* Create Discussion */
+.page-node-add-forum {
+  .wrapper {
+    max-width: 52em;
+  }
+}
+
+/* .a11y from utils.css.scss */
+.element-invisible {
+  position: absolute;
+  left: -300em;
+  width: 1em;
+  overflow: hidden;
+}

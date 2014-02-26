@@ -11,6 +11,10 @@ function komin_preprocess_html(&$variables) {
 
   // Set development class
   $variables['classes_array'][] = 'development';
+
+  // Set Malmö Assets classes
+  $variables['classes_array'][] = 'malmo-form';
+  $variables['classes_array'][] = 'malmo-masthead-more';
 }
 
 

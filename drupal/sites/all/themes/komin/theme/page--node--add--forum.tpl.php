@@ -16,7 +16,7 @@
   <?php endif; ?>
 </header>
 
-<div class="main-container">
+<div class="wrapper">
   <?php if (!empty($page['sidebar_first'])): ?>
     <aside>
       <?php print render($page['sidebar_first']); ?>
