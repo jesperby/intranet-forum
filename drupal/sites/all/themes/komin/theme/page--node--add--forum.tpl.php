@@ -23,11 +23,11 @@
     </aside>
   <?php endif; ?>
 
-  <acticle>
+  <article>
     <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
     <?php print render($title_prefix); ?>
     <?php if (!empty($title)): ?>
-      <h1 class="page-header"><?php print $title; ?></h1>
+      <h1 class="box-title"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php print $messages; ?>
@@ -41,13 +41,7 @@
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
     <?php print render($page['content']); ?>
-  </acticle>
-
-  <?php if (!empty($page['sidebar_second'])): ?>
-    <aside>
-      <?php print render($page['sidebar_second']); ?>
-    </aside>
-  <?php endif; ?>
+  </article>
 
 </div>
 <footer>
