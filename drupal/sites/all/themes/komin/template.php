@@ -24,6 +24,27 @@ function komin_preprocess_button(&$vars) {
   }
 }
 
+
+function komin_field_widget_form_alter(&$element, &$form_state, $context) {
+  $element['#attributes']['class'][] = 'input-wide';
+}
+
+function komin_form_user_login_block_alter(&$form, &$form_state, $form_id) {
+  $form['name']['#attributes']['class'][] = 'input-wide';
+  $form['pass']['#attributes']['class'][] = 'input-wide';
+}
+
+
+function komin_forum_node_form_after_build(&$form) {
+  $form['body']['und'][0]['format']['#access'] = false;
+  return $form;
+}
+
+function komin_comment_node_forum_form_after_build(&$form) {
+  $form['comment_body']['und'][0]['format']['#access'] = false;
+  return $form;
+}
+
 function komin_form_alter(&$form, &$form_state, $form_id) {
 
   /*
@@ -200,16 +221,6 @@ function komin_form_element(&$variables) {
   return $output;
 }
 
-function komin_forum_node_form_after_build(&$form) {
-  $form['body']['und'][0]['format']['#access'] = false;
-  return $form;
-}
-
-function komin_comment_node_forum_form_after_build(&$form) {
-  $form['comment_body']['und'][0]['format']['#access'] = false;
-  return $form;
-}
-
 function komin_form_element_label(&$variables) {
   $element = $variables['element'];
 
@@ -261,15 +272,6 @@ function komin_form_element_label(&$variables) {
 
   // The leading whitespace helps visually separate fields from inline labels.
   return ' <label' . drupal_attributes($attributes) . '>' . $output . "</label>\n";
-}
-
-function komin_field_widget_form_alter(&$element, &$form_state, $context) {
-  $element['#attributes']['class'][] = 'input-wide';
-}
-
-function komin_form_user_login_block_alter(&$form, &$form_state, $form_id) {
-  $form['name']['#attributes']['class'][] = 'input-wide';
-  $form['pass']['#attributes']['class'][] = 'input-wide';
 }
 
 function komin_pager($variables) {
