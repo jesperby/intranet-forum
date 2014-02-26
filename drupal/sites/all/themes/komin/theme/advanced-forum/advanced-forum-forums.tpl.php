@@ -22,10 +22,14 @@
  * @see template_preprocess_forums()
  * @see advanced_forum_preprocess_forums()
  */
-?>
 
+$title = drupal_get_title();
+?>
+<?php if (!empty($title)): ?>
+  <h1 class="box-title"><?php print $title; ?></h1>
+<?php endif; ?>
 <?php if ($forums_defined): ?>
-  <div id="forum">
+  <div id="forum" class="box light">
 
     <?php print $forums; ?>
 
@@ -43,8 +47,8 @@
       <?php print $forum_legend; ?>
     <?php endif; ?>
 
-     <?php if (false && !empty($forum_statistics)): ?>
-       <?php print $forum_statistics; ?>
-     <?php endif; ?>
+    <?php if (false && !empty($forum_statistics)): ?>
+      <?php print $forum_statistics; ?>
+    <?php endif; ?>
   </div>
 <?php endif; ?>
