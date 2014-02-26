@@ -1,7 +1,7 @@
 <section class="box">
 	<h1 class="box-title">Logga in</h1>
 	<div class="box-content body-copy">
-		<form id="user-login-form" method="post" action="/node?destination=node">
+		<form id="user-login-form" method="post" action="/<?php echo current_path(); ?>?destination=<?php echo htmlspecialchars(current_path()) ?>">
 		<div>
 			<div class="form-type-textfield form-item-name control-group form-item form-group">
 				<label class="control-label" for="edit-name">Användarnamn: <span class="form-required" title="Detta fält är obligatoriskt.">*</span></label>
