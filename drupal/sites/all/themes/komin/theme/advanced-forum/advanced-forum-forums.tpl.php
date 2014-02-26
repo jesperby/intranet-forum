@@ -23,11 +23,8 @@
  * @see advanced_forum_preprocess_forums()
  */
 
-$title = drupal_get_title();
 ?>
-<?php if (!empty($title)): ?>
-  <h1 class="box-title"><?php print $title; ?></h1>
-<?php endif; ?>
+
 <?php if ($forums_defined): ?>
   <div id="forum" class="box light">
 
