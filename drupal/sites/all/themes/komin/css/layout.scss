@@ -2,10 +2,6 @@ body {
   margin: 2.5em 0 0;
 }
 
-.main-container {
-  margin: 2em;
-}
-
 h1{
   font-weight: normal;
   font-size: 2em;
@@ -14,7 +10,7 @@ h1{
 }
 
 article {
-  @include columns(6);
+  @include columns(9);
 }
 aside {
   @include columns(3, true);
