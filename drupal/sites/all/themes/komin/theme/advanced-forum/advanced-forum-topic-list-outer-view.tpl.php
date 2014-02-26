@@ -82,7 +82,7 @@
     <div class="forum-pager clearfix" id="forum-pager-bottom"><?php print $pager; ?></div>
   <?php endif; ?>
 
-  <?php if (!empty($view->sort_form)): ?>
+  <?php if (false && !empty($view->sort_form)): ?>
     <div id="forum-sort"><?php print advanced_forum_forum_topic_list_sort(); ?></div>
   <?php endif; ?>
 
