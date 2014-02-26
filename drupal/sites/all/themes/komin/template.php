@@ -17,6 +17,12 @@ function komin_preprocess_html(&$variables) {
   $variables['classes_array'][] = 'malmo-masthead-more';
 }
 
+function komin_preprocess_button(&$vars) {
+  $vars['element']['#attributes']['class'][] = 'btn';
+  if (isset($vars['element']['#id']) && $vars['element']['#id'] == 'edit-submit') {
+    $vars['element']['#attributes']['class'][] = 'btn-primary';
+  }
+}
 
 function komin_form_alter(&$form, &$form_state, $form_id) {
 
@@ -40,7 +46,7 @@ function komin_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
-  
+
 }
 
 function komin_form_element(&$variables) {
@@ -221,6 +227,9 @@ function komin_form_element_label(&$variables) {
   if (isset($variables['#children'])) {
     $output .= $variables['#children'];
   }
+
+  // Malmostad - Prepend colon
+  $title .= ':';
 
   // Append label.
   $output .= $t('!title !required', array('!title' => $title, '!required' => $required));
