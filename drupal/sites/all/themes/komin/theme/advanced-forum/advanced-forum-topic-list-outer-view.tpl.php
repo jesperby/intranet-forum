@@ -86,7 +86,7 @@
     <div id="forum-sort"><?php print advanced_forum_forum_topic_list_sort(); ?></div>
   <?php endif; ?>
 
-  <?php if (!empty($forum_tools)): ?>
+  <?php if (false && !empty($forum_tools)): ?>
     <div class="forum-tools"><?php print $forum_tools; ?></div>
   <?php endif; ?>
 

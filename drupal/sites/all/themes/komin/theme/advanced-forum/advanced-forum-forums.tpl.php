@@ -29,7 +29,7 @@
 
     <?php print $forums; ?>
 
-    <?php if (!empty($forum_tools)): ?>
+    <?php if (false && !empty($forum_tools)): ?>
       <div class="forum-tools"><?php print $forum_tools; ?></div>
     <?php endif; ?>
 
