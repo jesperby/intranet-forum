@@ -19,7 +19,7 @@
     <caption><?php print $title; ?></caption>
   <?php endif; ?>
 
-  <table class="forum-table forum-table-topics <?php print $classes; ?>">
+  <table class="full forum-table forum-table-topics <?php print $classes; ?>">
     <thead>
       <tr>
         <?php foreach ($header as $field => $label): ?>
@@ -43,7 +43,7 @@
                <?php print $content; ?>
               </td>
             <?php endforeach; ?>
-          <?php else: ?> 
+          <?php else: ?>
             <?php /* For shadow posts, we print only the icon and themed notice. */ ?>
             <td class="views-field views-field-<?php print $fields['topic_icon']; ?>">
               <?php print $row['topic_icon']; ?>

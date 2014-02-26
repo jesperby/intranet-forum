@@ -6,8 +6,8 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
     <title><?php print $head_title; ?></title>
     <?php /* Remove */ ?>
-    <?php print $head; ?>
-    <?php print $styles; ?>
+    <?php // print $head; ?>
+    <?php // print $styles; ?>
     <!--[if lte IE 8]>
     <script src='//assets.malmo.se/internal/3.0/html5shiv-printshiv.js' type='text/javascript'></script><![endif]-->
     <link href='//assets.malmo.se/internal/3.0/malmo.css' media='all' rel='stylesheet' type='text/css'/>
