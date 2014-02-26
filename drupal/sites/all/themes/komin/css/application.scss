@@ -14,8 +14,33 @@
   margin: 1em auto;
 }
 
+/* Breadcrumbs */
 .breadcrumb {
     margin-bottom:2em;
+}
+
+/* More Link */
+.more-link {
+  margin:0;
+
+  a {
+    font-family:$sansSerif;
+    font-size:0.8125em;
+    border-bottom:0;
+    display:block;
+
+    padding: 0.4em .7em;
+    border:0;
+    border-top:1px solid;
+    border-color:#fff;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      background-color: #F5F5F5;
+      border-color: #CCC;
+    }
+  }
 }
 
 /* Create Discussion */
@@ -49,26 +74,9 @@
 .forum-post-number {
   float: right;
 }
-
-/* Forum Icons */
-.forum-list-icon,
-.views-field-topic-icon {
-    width:40px;
-
-  .forum-list-icon-wrapper {
-    width:32px;
-    height:32px;
-    display:block;
-
-    span {
-      position: absolute;
-      left: -300em;
-      width: 1em;
-      overflow: hidden;
-    }
-  }
+.indented {
+  margin-left:2em;
 }
-
 
 /* Sidebar Content */
 aside {

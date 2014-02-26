@@ -54,7 +54,7 @@
       <?php print $rows; ?>
     </div>
   <?php elseif ($empty): ?>
-    <div class="view-empty">
+    <div class="view-empty error">
       <?php print $empty; ?>
     </div>
   <?php endif; ?>

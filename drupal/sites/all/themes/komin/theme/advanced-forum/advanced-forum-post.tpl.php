@@ -104,9 +104,11 @@
   </div> <?php // End of post wrapper div ?>
 
   <div class="forum-post-footer clearfix">
+    <!--
     <div class="forum-jump-links">
       <a href="#forum-topic-top" title="<?php print t('Jump to top of page'); ?>" class="af-button-small btn"><span><?php print t("Top"); ?></span></a>
     </div>
+    -->
 
     <div class="forum-post-links">
       <?php print render($content['links']); ?>
