@@ -18,28 +18,29 @@ function komin_preprocess_html(&$variables) {
 }
 
 
-
 function komin_form_alter(&$form, &$form_state, $form_id) {
 
   /*
    * Add class to form tag
    */
-  $additional_classes = array();
-  foreach ($form['#attributes']['class'] as $class) {
-    switch ($class) {
-      case 'node-forum-form':
-        $additional_classes[] = 'form-horizontal';
-        $additional_classes[] = 'control-group';
-        break;
+  if (isset($form['#attributes']['class'])) {
+    $additional_classes = array();
+    foreach ($form['#attributes']['class'] as $class) {
+      switch ($class) {
+        case 'node-forum-form':
+          $additional_classes[] = 'form-horizontal';
+          $additional_classes[] = 'control-group';
+          break;
+      }
+    }
+
+    foreach ($additional_classes as $class) {
+      if (!in_array($class, $form['#attributes']['class'])) {
+        $form['#attributes']['class'][] = $class;
+      }
     }
   }
-
-  foreach ($additional_classes as $class) {
-    if (!in_array($class, $form['#attributes']['class'])) {
-      $form['#attributes']['class'][] = $class;
-    }
-  }
-
+  
 }
 
 function komin_form_element(&$variables) {
