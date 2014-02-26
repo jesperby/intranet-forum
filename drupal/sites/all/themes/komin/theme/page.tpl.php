@@ -16,14 +16,14 @@
   <?php endif; ?>
 </header>
 
-<div class="main-container">
+<div class="wrapper">
   <?php if (!empty($page['sidebar_first'])): ?>
     <aside>
       <?php print render($page['sidebar_first']); ?>
     </aside>
   <?php endif; ?>
 
-  <acticle>
+  <article>
     <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
     <?php print render($title_prefix); ?>
     <?php if (!empty($title)): ?>
@@ -41,7 +41,7 @@
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
     <?php print render($page['content']); ?>
-  </acticle>
+  </article>
 
   <?php if (!empty($page['sidebar_second'])): ?>
     <aside>
