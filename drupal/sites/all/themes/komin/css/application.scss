@@ -35,3 +35,60 @@
   overflow: hidden;
 }
 
+/* Forum Super Header */
+.forum-collapsible {
+  cursor:pointer;
+  float:right;
+}
+
+/* Forum Icons */
+.forum-list-icon {
+    width:40px;
+
+  .forum-list-icon-wrapper {
+    width:32px;
+    height:32px;
+    display:block;
+
+    span {
+      position: absolute;
+      left: -300em;
+      width: 1em;
+      overflow: hidden;
+    }
+  }
+}
+
+
+/* Sidebar Content */
+aside {
+  #block-node-recent,
+  #block-forum-new {
+
+    .box-title {
+      margin-bottom: 0;
+    }
+
+    .box-content {
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      margin: 0;
+
+      tr:first-child {
+         td {
+           border:0;
+         }
+      }
+
+      tr:last-child {
+         td {
+           border:0;
+         }
+      }
+    }
+  }
+
+}

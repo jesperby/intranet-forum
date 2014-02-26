@@ -47,18 +47,18 @@
 <?php foreach ($tables as $table_id => $table): ?>
   <?php $table_info = $table['table_info']; ?>
 
-  <div class="forum-table-wrap">
+  <div class="forum-table-wrap wrap">
     <div class="forum-table-superheader">
-      <div class="forum-table-name">
+      <div class="forum-table-name box-title">
         <?php if (empty($table_info->link)): ?>
           <?php print $table_info->name; ?>
         <?php else: ?>
           <a href="<?php print $table_info->link; ?>"><?php print $table_info->name; ?></a>
         <?php endif; ?>
+        <?php if ($collapsible): ?>
+          <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible icon-caret-down icon-large" ><span class="a11y">Visa/Dölj</span></span>
+        <?php endif; ?>
       </div>
-      <?php if ($collapsible): ?>
-        <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible" >&nbsp;</span>
-      <?php endif; ?>
       <div class="forum-table-description"><?php print $table_info->description; ?></div>
 
     </div>
