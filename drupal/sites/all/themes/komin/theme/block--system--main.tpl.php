@@ -3,7 +3,7 @@
   if (!empty($title)): ?>
     <h1 class="box-title"><?php print $title; ?></h1>
   <?php endif; ?>
-  
+
   <?php print render($title_prefix); ?>
   <?php if ($block->subject): ?>
     <h1 class="box-title"<?php print $title_attributes; ?>><?php print $block->subject ?></h1>
