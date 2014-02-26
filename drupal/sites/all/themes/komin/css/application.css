@@ -254,6 +254,20 @@ aside {
 .breadcrumb {
   margin-bottom: 2em; }
 
+/* Icons */
+.forum-list-icon,
+.views-field-topic-icon {
+  max-width: 14px; }
+
+.forum-list-icon-wrapper,
+.topic-icon {
+  width: 42px;
+  height: 42px;
+  display: block;
+  background: whitesmoke;
+  text-indent: -300em;
+  border-radius: 100%; }
+
 /* More Link */
 .more-link {
   margin: 0; }
@@ -311,6 +325,9 @@ aside {
 aside #block-node-recent .box-title,
 aside #block-forum-new .box-title {
   margin-bottom: 0; }
+  aside #block-node-recent .box-title a,
+  aside #block-forum-new .box-title a {
+    color: #fff; }
 aside #block-node-recent .box-content,
 aside #block-forum-new .box-content {
   margin: 0; }
