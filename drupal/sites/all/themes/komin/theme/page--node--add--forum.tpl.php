@@ -24,7 +24,6 @@
   <?php endif; ?>
 
   <article>
-    <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
     <?php print render($title_prefix); ?>
     <?php if (!empty($title)): ?>
       <h1 class="box-title"><?php print $title; ?></h1>
@@ -41,7 +40,8 @@
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
     <?php print render($page['content']); ?>
-  </article>
+    <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+ </article>
 
 </div>
 <footer class="bigfoot">
