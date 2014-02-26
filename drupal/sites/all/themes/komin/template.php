@@ -11,4 +11,9 @@ function komin_preprocess_html(&$variables) {
 
   // Set development class
   $variables['classes_array'][] = 'development';
+  $variables['classes_array'][] = 'malmo-form';
+}
+
+function komin_preprocess_button(&$vars) {
+  $vars['element']['#attributes']['class'][] = 'btn';
 }
