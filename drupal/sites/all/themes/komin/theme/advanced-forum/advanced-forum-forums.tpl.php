@@ -43,7 +43,7 @@
       <?php print $forum_legend; ?>
     <?php endif; ?>
 
-     <?php if (!empty($forum_statistics)): ?>
+     <?php if (false && !empty($forum_statistics)): ?>
        <?php print $forum_statistics; ?>
      <?php endif; ?>
   </div>
