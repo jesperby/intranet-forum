@@ -22,6 +22,9 @@
   .wrapper {
     max-width: 52em;
   }
+  article {
+    @include columns(12);
+  }
 }
 
 /* .a11y from utils.css.scss */
@@ -31,3 +34,4 @@
   width: 1em;
   overflow: hidden;
 }
+
