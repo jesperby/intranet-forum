@@ -25,8 +25,8 @@
   <?php print $topic_header ?>
 <?php endif; ?>
 
-<div id="<?php print $post_id; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
-  <div class="forum-post-info clearfix">
+<div id="<?php print $post_id; ?>" class="box light <?php print $classes; ?>" <?php print $attributes; ?>>
+  <div class="forum-post-info box-title clearfix">
     <div class="forum-posted-on">
       <?php print $date ?>
 
@@ -63,7 +63,7 @@
     <span class="forum-post-number"><?php print $permalink; ?></span>
   </div> <?php // End of post info div ?>
 
-  <div class="forum-post-wrapper">
+  <div class="forum-post-wrapper box-content body-copy">
     <div class="forum-post-panel-sub">
       <?php if (!empty($author_pane)): ?>
         <?php print $author_pane; ?>
@@ -105,7 +105,7 @@
 
   <div class="forum-post-footer clearfix">
     <div class="forum-jump-links">
-      <a href="#forum-topic-top" title="<?php print t('Jump to top of page'); ?>" class="af-button-small"><span><?php print t("Top"); ?></span></a>
+      <a href="#forum-topic-top" title="<?php print t('Jump to top of page'); ?>" class="af-button-small btn"><span><?php print t("Top"); ?></span></a>
     </div>
 
     <div class="forum-post-links">

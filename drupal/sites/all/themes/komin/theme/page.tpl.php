@@ -50,6 +50,6 @@
   <?php endif; ?>
 
 </div>
-<footer>
+<footer class="bigfoot">
   <?php print render($page['footer']); ?>
 </footer>

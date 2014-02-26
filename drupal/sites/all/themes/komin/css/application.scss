@@ -6,6 +6,7 @@
 @import 'layout';
 @import 'variables';
 @import 'boxes';
+@import 'navs';
 
 .wrapper {
   @include clearfix();
@@ -41,8 +42,17 @@
   float:right;
 }
 
+/* Forum Comments */
+.forum-posted-on {
+  float: left;
+}
+.forum-post-number {
+  float: right;
+}
+
 /* Forum Icons */
-.forum-list-icon {
+.forum-list-icon,
+.views-field-topic-icon {
     width:40px;
 
   .forum-list-icon-wrapper {
