@@ -47,6 +47,9 @@ function komin_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 
+  if($form_id == 'forum_node_form') {
+    $form['#after_build'][] = 'komin_forum_node_form_after_build';
+  }
 }
 
 function komin_form_element(&$variables) {
@@ -183,6 +186,11 @@ function komin_form_element(&$variables) {
   $output .= "</div>\n";
 
   return $output;
+}
+
+function komin_forum_node_form_after_build(&$form) {
+  $form['body']['und'][0]['format']['#access'] = false;
+  return $form;
 }
 
 function komin_form_element_label(&$variables) {
