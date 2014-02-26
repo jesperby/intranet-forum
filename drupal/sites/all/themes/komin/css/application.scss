@@ -19,6 +19,22 @@
     margin-bottom:2em;
 }
 
+/* Icons */
+.forum-list-icon,
+.views-field-topic-icon {
+  max-width:14px;
+}
+
+.forum-list-icon-wrapper,
+.topic-icon {
+  width:42px;
+  height:42px;
+  display:block;
+  background:$backgroundLight;
+  text-indent:-300em;
+  border-radius:100%;
+}
+
 /* More Link */
 .more-link {
   margin:0;
@@ -85,6 +101,10 @@ aside {
 
     .box-title {
       margin-bottom: 0;
+
+      a {
+        color:#fff;
+      }
     }
 
     .box-content {

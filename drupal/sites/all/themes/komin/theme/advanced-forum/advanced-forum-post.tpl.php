@@ -71,7 +71,7 @@
     </div>
 
     <div class="forum-post-panel-main clearfix">
-      <?php if (!empty($title)): ?>
+      <?php if ($top_post && !empty($title)): ?>
         <div class="forum-post-title">
           <?php print $title ?>
         </div>
