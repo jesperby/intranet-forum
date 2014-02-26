@@ -22,10 +22,9 @@
 
     <?php print $page_top; ?>
     <?php print $page; ?>
-    <?php print $page_bottom; ?>
     <script src='//assets.malmo.se/internal/3.0/malmo.js'></script>
     <script src='<?php print $komin_script; ?>'></script>
     <?php print $scripts; ?>
-
+    <?php print $page_bottom; ?>
   </body>
 </html>
