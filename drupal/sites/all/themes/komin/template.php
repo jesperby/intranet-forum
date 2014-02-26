@@ -241,3 +241,8 @@ function komin_form_element_label(&$variables) {
 function komin_field_widget_form_alter(&$element, &$form_state, $context) {
   $element['#attributes']['class'][] = 'input-wide';
 }
+
+function komin_form_user_login_block_alter(&$form, &$form_state, $form_id) {
+  $form['name']['#attributes']['class'][] = 'input-wide';
+  $form['pass']['#attributes']['class'][] = 'input-wide';
+}
