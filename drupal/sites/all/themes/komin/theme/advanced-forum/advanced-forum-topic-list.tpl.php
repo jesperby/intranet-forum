@@ -38,7 +38,7 @@
 
 <?php print $pager; ?>
 
-<table id="forum-topic-<?php print $topic_id; ?>" class="forum-table forum-table-topics">
+<table id="forum-topic-<?php print $topic_id; ?>" class="full forum-table forum-table-topics">
   <thead>
     <tr><?php print $header; ?></tr>
   </thead>

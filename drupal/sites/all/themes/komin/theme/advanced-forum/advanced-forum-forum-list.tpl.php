@@ -63,7 +63,7 @@
 
     </div>
     <div id="forum-table-<?php print $table_info->tid; ?>">
-      <table class="forum-table forum-table-forums">
+      <table class="full forum-table forum-table-forums">
         <thead class="forum-header">
           <tr>
             <th class="forum-icon">&nbsp;</th>
