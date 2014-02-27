@@ -263,7 +263,7 @@ table tr.even {
   width: 26px; }
 
 .forum-list-icon-wrapper span,
-.topic-icon span {
+.topic-icon {
   width: 42px;
   height: 42px;
   display: block;
@@ -274,22 +274,27 @@ table tr.even {
 tr.even td.forum-list-icon-default .forum-list-icon-wrapper span,
 tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span,
 .forum-list-icon-legend .forum-list-icon-default {
-  background: #6898D0; }
+  background: #6898d0 url(../img/icon-default.svg) 50% 50% no-repeat;
+  background-size: 60%; }
 
 tr.even td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 .forum-list-icon-legend .forum-list-icon-new-posts {
-  background: #5F9E25; }
+  background: #5f9e25 url(../img/icon-new.svg) 50% 50% no-repeat;
+  background-size: 60%; }
 
 /* Topic List Icons */
 .topic-icon-default {
-  background: #6898D0; }
+  background: #6898d0 url(../img/icon-default.svg) 50% 50% no-repeat;
+  background-size: 60%; }
 
 .topic-icon-new {
-  background: #5F9E25; }
+  background: #5f9e25 url(../img/icon-new.svg) 50% 50% no-repeat;
+  background-size: 60%; }
 
 .topic-icon-hot {
-  background: #D43F3F; }
+  background: #d43f3f url(../img/icon-hot.svg) 50% 50% no-repeat;
+  background-size: 60%; }
 
 .topic-icon-hot-new {
   background: #D43F3F; }
@@ -298,7 +303,8 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
   background: #CEBC31; }
 
 .topic-icon-closed {
-  background: #545454; }
+  background: #545454 url(../img/icon-hot.svg) 50% 50% no-repeat;
+  background-size: 60%; }
 
 /* More Link */
 .more-link {
