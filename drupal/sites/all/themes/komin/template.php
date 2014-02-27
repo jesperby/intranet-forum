@@ -15,7 +15,20 @@ function komin_preprocess_html(&$variables) {
   // Set Malmö Assets classes
   $variables['classes_array'][] = 'malmo-form';
   $variables['classes_array'][] = 'malmo-masthead-more';
+
+
 }
+
+function komin_preprocess_links(&$variables){
+  if (isset($variables['links']['comment-reply']['attributes']['class'])){
+    $variables['links']['comment-reply']['attributes']['class'][] = 'btn';
+  }
+}
+
+function komin_preprocess_page(&$variables) {
+// $links = $variables['page']['content']['system_main']['nodes']
+}
+
 
 function komin_preprocess_button(&$vars) {
   $vars['element']['#attributes']['class'][] = 'btn';
@@ -43,6 +56,65 @@ function komin_forum_node_form_after_build(&$form) {
 function komin_comment_node_forum_form_after_build(&$form) {
   $form['comment_body']['und'][0]['format']['#access'] = false;
   return $form;
+}
+
+function komin_advanced_forum_l(&$variables) {
+  $text = $variables['text'];
+  $path = empty($variables['path']) ? NULL : $variables['path'];
+  $options = empty($variables['options']) ? array() : $variables['options'];
+  $button_class = empty($variables['button_class']) ? NULL : $variables['button_class'];
+
+  if (!isset($options['attributes'])) {
+    $options['attributes'] = array();
+  }
+  if (!is_null($button_class)) {
+    // Buttonized link: add our button class and the span.
+    if (!isset($options['attributes']['class'])) {
+      $options['attributes']['class'] = array($button_class);
+    }
+    else {
+      $options['attributes']['class'][] = $button_class;
+    }
+
+    // Add btn class
+    $options['attributes']['class'][] = "btn";
+    $options['html'] = TRUE;
+    $l = l($text, $path, $options);
+  }
+  else {
+    // Standard link: just send it through l().
+    $l = l($text, $path, $options);
+  }
+
+  return $l;
+}
+
+function komin_advanced_forum_reply_link(&$variables) {
+  $node = $variables['node'];
+
+  // Get the information about whether the user can reply and the link to do
+  // so if the user is allowed to.
+  $reply_link = advanced_forum_get_reply_link($node);
+
+  if (is_array($reply_link)) {
+    // Reply is allowed. Variable contains the link information.
+    $output = '<div class="topic-reply-allowed">';
+    $output .= theme('advanced_forum_l', array(
+        'text' => $reply_link['title'],
+        'path' => $reply_link['href'],
+        'options' => $reply_link['options'],
+        'button_class' => 'btn-primary'
+      ));
+    $output .= '</div>';
+    return $output;
+  }
+  elseif ($reply_link == 'reply-locked') {
+    return '<div class="topic-reply-locked">' . t('Topic locked') . '</div>';
+  }
+  elseif ($reply_link == 'reply-forbidden') {
+    // User is not allowed to reply to this topic.
+    return theme('comment_post_forbidden', array('node' => $node));
+  }
 }
 
 function komin_form_alter(&$form, &$form_state, $form_id) {
