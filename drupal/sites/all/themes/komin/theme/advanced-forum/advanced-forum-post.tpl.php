@@ -52,7 +52,7 @@
     </div>  <?php // End of posted on div ?>
 
     <?php if (!empty($in_reply_to)): ?>
-   	 <span class="forum-in-reply-to"><?php print $in_reply_to; ?></span>
+      <span class="forum-in-reply-to"><?php print $in_reply_to; ?></span>
     <?php endif; ?>
 
     <?php // Add a note when a post is unpublished so it doesn't rely on theming. ?>
@@ -79,13 +79,14 @@
 
       <div class="forum-post-content">
         <?php
-          // We hide the comments and links now so that we can render them later.
-          hide($content['taxonomy_forums']);
-          hide($content['comments']);
-          hide($content['links']);
-          if (!$top_post)
-            hide($content['body']);
-          print render($content);
+        // We hide the comments and links now so that we can render them later.
+        hide($content['taxonomy_forums']);
+        hide($content['comments']);
+        hide($content['links']);
+        if (!$top_post) {
+          hide($content['body']);
+        }
+        print render($content);
         ?>
       </div>
 
@@ -104,11 +105,14 @@
   </div> <?php // End of post wrapper div ?>
 
   <div class="forum-post-footer clearfix">
-    <!--
+    <?php /*
     <div class="forum-jump-links">
-      <a href="#forum-topic-top" title="<?php print t('Jump to top of page'); ?>" class="af-button-small btn"><span><?php print t("Top"); ?></span></a>
+      <a href="#forum-topic-top" title="<?php print t(
+      'Jump to top of page'
+    ); ?>" class="af-button-small btn"><span><?php print t("Top"); ?></span></a>
     </div>
-    -->
+  */
+    ?>
 
     <div class="forum-post-links">
       <?php print render($content['links']); ?>
