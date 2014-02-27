@@ -72,9 +72,9 @@
 
     <div class="forum-post-panel-main clearfix">
       <?php if ($top_post && !empty($title)): ?>
-        <div class="forum-post-title">
+        <h2 class="forum-post-title">
           <?php print $title ?>
-        </div>
+        </h2>
       <?php endif; ?>
 
       <div class="forum-post-content">
