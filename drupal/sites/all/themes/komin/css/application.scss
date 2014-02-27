@@ -19,20 +19,57 @@
     margin-bottom:2em;
 }
 
+table {
+  tr.even {
+    background:$backgroundLight;
+  }
+}
+
 /* Icons */
 .forum-list-icon,
 .views-field-topic-icon {
-  max-width:14px;
+  width:26px;
 }
 
-.forum-list-icon-wrapper,
-.topic-icon {
+.forum-list-icon-wrapper span,
+.topic-icon span {
   width:42px;
   height:42px;
   display:block;
   background:$backgroundLight;
   text-indent:-300em;
   border-radius:100%;
+}
+
+tr.even td.forum-list-icon-default .forum-list-icon-wrapper span,
+tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span,
+.forum-list-icon-legend .forum-list-icon-default {
+  background:#6898D0;
+}
+tr.even td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
+tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
+.forum-list-icon-legend .forum-list-icon-new-posts {
+  background:#5F9E25;
+}
+
+/* Topic List Icons */
+.topic-icon-default {
+  background:#6898D0;
+}
+.topic-icon-new {
+  background:#5F9E25;
+}
+.topic-icon-hot {
+  background:#D43F3F;
+}
+.topic-icon-hot-new {
+  background:#D43F3F;
+}
+.topic-icon-sticky {
+  background:#CEBC31;
+}
+.topic-icon-closed {
+  background:#545454;
 }
 
 /* More Link */

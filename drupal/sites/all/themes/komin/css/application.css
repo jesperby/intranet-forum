@@ -15,7 +15,7 @@
   article .featured-image img {
     display: block;
     float: none;
-    margin: 0.3em 0 1em 0;
+    margin: .3em 0 1em 0;
     width: 100%;
     height: auto; } }
 body {
@@ -25,7 +25,7 @@ h1 {
   font-weight: normal;
   font-size: 2em;
   line-height: 1.1;
-  margin: 0.1em 0 0.3em; }
+  margin: .1em 0 .3em; }
 
 article {
   width: 74%;
@@ -91,8 +91,8 @@ aside {
     line-height: emize(18, 13);
     font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
     font-weight: normal;
-    margin: 0 0 0.6em;
-    padding: 0.3em 0.6em 0.5em;
+    margin: 0 0 .6em;
+    padding: .3em .6em .5em;
     background: #5a5a5a;
     color: white;
     overflow: hidden;
@@ -107,8 +107,8 @@ aside {
     padding: 0; }
   .box .box-instructions {
     display: none;
-    margin: 0.5em 0.9em 0.7em;
-    padding: 0.5em 0.7em;
+    margin: .5em .9em .7em;
+    padding: .5em .7em;
     border: #cccccc 1px solid;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -117,12 +117,12 @@ aside {
       font-size: emize(22);
       font-weight: normal;
       line-height: 1.2;
-      margin: 0 0 0.1em; }
+      margin: 0 0 .1em; }
     .box .box-instructions p {
       font-size: emize(15);
       line-height: emize(19, 15);
       padding: 0;
-      margin: 0 0 0.5em; }
+      margin: 0 0 .5em; }
     .box .box-instructions.show {
       display: block; }
   .box .toggle-instructions {
@@ -254,19 +254,51 @@ aside {
 .breadcrumb {
   margin-bottom: 2em; }
 
+table tr.even {
+  background: whitesmoke; }
+
 /* Icons */
 .forum-list-icon,
 .views-field-topic-icon {
-  max-width: 14px; }
+  width: 26px; }
 
-.forum-list-icon-wrapper,
-.topic-icon {
+.forum-list-icon-wrapper span,
+.topic-icon span {
   width: 42px;
   height: 42px;
   display: block;
   background: whitesmoke;
   text-indent: -300em;
   border-radius: 100%; }
+
+tr.even td.forum-list-icon-default .forum-list-icon-wrapper span,
+tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span,
+.forum-list-icon-legend .forum-list-icon-default {
+  background: #6898D0; }
+
+tr.even td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
+tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
+.forum-list-icon-legend .forum-list-icon-new-posts {
+  background: #5F9E25; }
+
+/* Topic List Icons */
+.topic-icon-default {
+  background: #6898D0; }
+
+.topic-icon-new {
+  background: #5F9E25; }
+
+.topic-icon-hot {
+  background: #D43F3F; }
+
+.topic-icon-hot-new {
+  background: #D43F3F; }
+
+.topic-icon-sticky {
+  background: #CEBC31; }
+
+.topic-icon-closed {
+  background: #545454; }
 
 /* More Link */
 .more-link {
@@ -276,7 +308,7 @@ aside {
     font-size: 0.8125em;
     border-bottom: 0;
     display: block;
-    padding: 0.4em 0.7em;
+    padding: 0.4em .7em;
     border: 0;
     border-top: 1px solid;
     border-color: #fff;
