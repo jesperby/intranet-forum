@@ -25,18 +25,12 @@ function komin_preprocess_links(&$variables){
   }
 }
 
-function komin_preprocess_page(&$variables) {
-// $links = $variables['page']['content']['system_main']['nodes']
-}
-
-
 function komin_preprocess_button(&$vars) {
   $vars['element']['#attributes']['class'][] = 'btn';
   if (isset($vars['element']['#id']) && $vars['element']['#id'] == 'edit-submit') {
     $vars['element']['#attributes']['class'][] = 'btn-primary';
   }
 }
-
 
 function komin_field_widget_form_alter(&$element, &$form_state, $context) {
   $element['#attributes']['class'][] = 'input-wide';
