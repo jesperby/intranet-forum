@@ -20,6 +20,9 @@ function komin_preprocess_html(&$variables) {
 }
 
 function komin_preprocess_links(&$variables){
+  if (isset($variables['links']['comment-add']['attributes']['class'])){
+    $variables['links']['comment-add']['attributes']['class'][] = 'btn';
+  }
   if (isset($variables['links']['comment-reply']['attributes']['class'])){
     $variables['links']['comment-reply']['attributes']['class'][] = 'btn';
   }
