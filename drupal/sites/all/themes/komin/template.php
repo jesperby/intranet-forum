@@ -401,3 +401,20 @@ function komin_pager($variables) {
   }
   return $output;
 }
+
+/**
+ * Displays the author information within a post.
+ */
+function komin_advanced_forum_simple_author_pane(&$variables) {
+  $context = $variables['context'];
+
+  $account = user_load($context->uid);
+  if(empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
+    $name = $account->name;
+  } else {
+    $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
+  }
+  $picture = theme('user_picture', array('account' => $account));
+
+  return '<div class="author-pane"><a href="#">' . $name . '</a>' . $picture . '</div>';
+}
