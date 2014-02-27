@@ -254,6 +254,11 @@ aside {
 .breadcrumb {
   margin-bottom: 2em; }
 
+/* Pagination */
+.pagination ul {
+  padding-left: 0; }
+
+/* Table */
 table tr.even {
   background: whitesmoke; }
 
@@ -273,25 +278,19 @@ table tr.even {
 
 tr.even td.forum-list-icon-default .forum-list-icon-wrapper span,
 tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span,
-.forum-list-icon-legend .forum-list-icon-default {
-  background: #6898d0 url(../img/icon-default.svg) 50% 50% no-repeat;
+.forum-list-icon-legend .forum-list-icon-default,
+.topic-icon-default {
+  background: #c2c2c2 url(../img/icon-default.svg) 50% 50% no-repeat;
   background-size: 60%; }
 
 tr.even td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
-.forum-list-icon-legend .forum-list-icon-new-posts {
-  background: #5f9e25 url(../img/icon-new.svg) 50% 50% no-repeat;
+.forum-list-icon-legend .forum-list-icon-new-posts,
+.topic-icon-new {
+  background: #578e55 url(../img/icon-new.svg) 50% 50% no-repeat;
   background-size: 60%; }
 
 /* Topic List Icons */
-.topic-icon-default {
-  background: #6898d0 url(../img/icon-default.svg) 50% 50% no-repeat;
-  background-size: 60%; }
-
-.topic-icon-new {
-  background: #5f9e25 url(../img/icon-new.svg) 50% 50% no-repeat;
-  background-size: 60%; }
-
 .topic-icon-hot {
   background: #d43f3f url(../img/icon-hot.svg) 50% 50% no-repeat;
   background-size: 60%; }
@@ -348,6 +347,9 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 .forum-collapsible {
   cursor: pointer;
   float: right; }
+
+.forum-table-superheader .box-title {
+  margin: 0; }
 
 /* Forum Comments */
 .forum-posted-on {
