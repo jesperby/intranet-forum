@@ -39,7 +39,7 @@ function malmostad_strongarm() {
     'domain' => '',
     'prefix' => 'sv',
     'weight' => '0',
-    'javascript' => 'KWjNTnf-fryb8kxS56R-FKkFih_CDGZ0MwcaHrDyeNE',
+    'javascript' => 'vgCRA5zRmD7oh2nO8aVp-RaLHmmoUjPgHT3vcnRYxC0',
   );
   $export['language_default'] = $strongarm;
 
