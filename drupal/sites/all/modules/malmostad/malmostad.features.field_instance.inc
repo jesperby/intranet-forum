@@ -88,10 +88,49 @@ function malmostad_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-forum-field_tags'
+  $field_instances['node-forum-field_tags'] = array(
+    'bundle' => 'forum',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ange vilket eller vilka intresseområden ditt diskussionsämne handlar om.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tags',
+    'label' => 'Intresseområden',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Ange vilket eller vilka intresseområden ditt diskussionsämne handlar om.');
   t('Du kan bifoga upp till fem filer genom att klicka på "Välj fil" och sedan "Ladda upp".');
   t('Filer');
+  t('Intresseområden');
 
   return $field_instances;
 }
