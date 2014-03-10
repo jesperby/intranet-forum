@@ -487,3 +487,31 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
 
   return '<div class="author-pane"><a href="#">' . $name . '</a>' . $picture . '</div>';
 }
+
+function komin_subscriptions_ui_table($element) {
+  $rows = array();
+  $headers = array();
+  $header_strings = array(
+    array('class' => 'subscriptions-table', 'width' => '30%'),
+    array('data'  => t('On&nbsp;updates'), 'width' => '1*', 'style' => 'writing-mode: lr-tb'),
+    array('data'  => t('On&nbsp;comments'))
+  );
+  $element = $element['element'];
+  foreach (element_children($element['subscriptions']) as $key) {
+    $row = array();
+    foreach (array('subscriptions', 'updates', 'comments') as $eli => $elv) {
+      if (isset($element[$elv]) && $element[$elv]['#access']) {
+        $row[] = drupal_render($element[$elv][$key]);
+        $headers[$eli] = $header_strings[$eli];
+      }
+    }
+    $rows[] = $row;
+  }
+
+  $col_indexes = array_keys($headers);
+  unset($headers[end($col_indexes)]['width']);
+
+  $output = theme('table', array('header' => $headers, 'rows' => $rows));
+  $output .= drupal_render_children($element);
+  return $output;
+}
