@@ -180,3 +180,39 @@ aside {
   }
 
 }
+
+#toolbar {
+	position: fixed;
+	top: 0em;
+	left: 0;
+	right: 0;
+
+	padding: 3em 0.5em 0.5em 0.5em;
+
+	z-index: 99;
+
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+
+	.toolbar-menu ul {
+		display: inline;
+
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+#toolbar-user {
+	float: right;
+}
+
+.contextual-links-wrapper {
+	font-size: 12px;
+	text-align: right;
+	padding: 0.5em;
+
+	.contextual-links {
+		display: none;
+	}
+}
