@@ -471,6 +471,13 @@ function komin_pager($variables) {
   return $output;
 }
 
+function komin_get_author_profile_link($account) {
+  $url = variable_get('komin_profile_url');
+  if(empty($url)) return '/user/' . $account->uid;
+
+  return str_replace('{username}', $account->name, $url);
+}
+
 /**
  * Displays the author information within a post.
  */
@@ -485,7 +492,21 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
   }
   $picture = theme('user_picture', array('account' => $account));
 
-  return '<div class="author-pane"><a href="#">' . $name . '</a>' . $picture . '</div>';
+  return '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '">' . $name . '</a>' . $picture . '</div>';
+}
+
+/**
+ * Displays the username more or less everywhere.
+ */
+function komin_username($variables) {
+  $account = user_load($variables['uid']);
+  if(empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
+    $name = $account->name;
+  } else {
+    $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
+  }
+
+  return '<a href="' . komin_get_author_profile_link($account) . '" class="forum-author">' . $name . '</a>';
 }
 
 function komin_subscriptions_ui_table($element) {
