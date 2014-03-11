@@ -536,3 +536,25 @@ function komin_subscriptions_ui_table($element) {
   $output .= drupal_render_children($element);
   return $output;
 }
+
+
+/*
+ * Render status messages.
+ */
+function komin_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  foreach(drupal_get_messages($display) as $type => $messages) {
+    switch($type) {
+      case 'status': $class = 'success'; break;
+      case 'error': $class = 'error'; break;
+      case 'warning': $class = 'warning'; break;
+    }
+
+    foreach($messages as $message) {
+      $output .= '<div class="' . $class . '">' . $message . '</div>';
+    }
+  }
+  return $output;
+}
