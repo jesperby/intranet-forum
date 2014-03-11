@@ -216,3 +216,26 @@ aside {
 		display: none;
 	}
 }
+
+ul.vertical-tabs-list {
+	float: left;
+	font-size: 12px;
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	margin-right: 1em;
+}
+
+.vertical-tab-button {
+	padding: 0.5em;
+
+	&.selected {
+		background: #eee;
+	}
+
+	.summary {
+		display: block;
+	}
+}
