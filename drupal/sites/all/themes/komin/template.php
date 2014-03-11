@@ -35,6 +35,20 @@ function komin_preprocess_button(&$vars) {
   }
 }
 
+function komin_link($variables) {
+  // Remove active class added by Drupal if we are a button
+  if (! empty($variables['options']['attributes']['class'])) {
+    $classes = &$variables['options']['attributes']['class'];
+    if (is_array($classes) && in_array('btn', $classes)) {
+      if (($key = array_search('active', $classes)) !== false) {
+        unset($classes[$key]);
+      }
+    }
+  }
+
+  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
+}
+
 function komin_field_widget_form_alter(&$element, &$form_state, $context) {
   $element['#attributes']['class'][] = 'input-wide';
 }
@@ -64,7 +78,6 @@ function komin_advanced_forum_l(&$variables) {
   if (!isset($options['attributes'])) {
     $options['attributes'] = array();
   }
-  $options['language'] = '_'; // FIXME: Temporary fix for active being added to AF buttons
   if (!is_null($button_class)) {
     // Buttonized link: add our button class and the span.
     if (!isset($options['attributes']['class'])) {
