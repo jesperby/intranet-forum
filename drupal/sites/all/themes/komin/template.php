@@ -64,6 +64,7 @@ function komin_advanced_forum_l(&$variables) {
   if (!isset($options['attributes'])) {
     $options['attributes'] = array();
   }
+  $options['language'] = '_'; // FIXME: Temporary fix for active being added to AF buttons
   if (!is_null($button_class)) {
     // Buttonized link: add our button class and the span.
     if (!isset($options['attributes']['class'])) {
@@ -95,18 +96,16 @@ function komin_advanced_forum_reply_link(&$variables) {
 
   if (is_array($reply_link)) {
     // Reply is allowed. Variable contains the link information.
-    $output = '<div class="topic-reply-allowed">';
-    $output .= theme('advanced_forum_l', array(
+    $output = theme('advanced_forum_l', array(
         'text' => $reply_link['title'],
         'path' => $reply_link['href'],
         'options' => $reply_link['options'],
         'button_class' => 'btn-primary'
       ));
-    $output .= '</div>';
     return $output;
   }
   elseif ($reply_link == 'reply-locked') {
-    return '<div class="topic-reply-locked">' . t('Topic locked') . '</div>';
+    return '<span class="topic-reply-locked">' . t('Topic locked') . '<span>';
   }
   elseif ($reply_link == 'reply-forbidden') {
     // User is not allowed to reply to this topic.
