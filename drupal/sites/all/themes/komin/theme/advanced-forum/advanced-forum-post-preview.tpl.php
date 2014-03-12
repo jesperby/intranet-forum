@@ -27,8 +27,8 @@
   <a id="forum-reply-preview"></a>
 <?php endif; ?>
 
-<div id="<?php print $post_id; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
-  <div class="forum-post-info clearfix">
+<div id="<?php print $post_id; ?>" class="box light <?php print $classes; ?>" <?php print $attributes; ?>>
+  <div class="forum-post-info box-title clearfix">
     <div class="forum-posted-on">
       <?php print $date ?>
 
@@ -47,16 +47,16 @@
     <?php endif; ?>
   </div>
 
-  <div class="forum-post-wrapper">
+  <div class="forum-post-wrapper box-content">
     <div class="forum-post-panel-sub">
       <?php print $author_pane; ?>
     </div>
 
-    <div class="forum-post-panel-main clearfix">
-      <?php if ($title): ?>
-        <div class="post-title">
+    <div class="forum-post-panel-main body-copy clearfix">
+      <?php if ($top_post && $title): ?>
+        <h2 class="post-title">
           <?php print $title ?>
-        </div>
+        </h2>
       <?php endif; ?>
 
       <div class="forum-post-content">
