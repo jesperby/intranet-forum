@@ -346,6 +346,8 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 /* Forum */
 .forum-table-wrap .forum-table {
   margin-bottom: 0; }
+.forum-table-wrap .container-collapsed {
+  border-bottom: 1px solid #cccccc; }
 .forum-table-wrap .forum-subforums {
   margin-top: .6em; }
   .forum-table-wrap .forum-subforums span {
