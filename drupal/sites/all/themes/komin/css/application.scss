@@ -126,6 +126,9 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
   .forum-table {
     margin-bottom:0;
   }
+  .container-collapsed{
+    $border-bottom:$borderColor 1px solid;
+  }
 }
 
 
