@@ -68,8 +68,7 @@
           <tr>
             <th class="forum-icon">&nbsp;</th>
             <th class="forum-name"><?php print t('Forum'); ?></th>
-            <th class="forum-topics"><?php print t('Topics'); ?></th>
-            <th class="forum-posts"><?php print t('Posts'); ?></th>
+            <th class="forum-topics-and-posts"><?php print t('Statistics'); ?></th>
             <th class="forum-last-post"><?php print t('Last post'); ?></th>
           </tr>
         </thead>
@@ -116,23 +115,23 @@
                 <?php endif; ?>
               </td>
               <?php if (!$item->is_container): ?>
-                <td class="forum-number-topics">
-                  <div class="forum-number-topics"><?php print $item->total_topics ?>
+                <td class="forum-number-topics-and-posts">
+                  <div class="forum-number-topics-with-new">
+                    <span class="forum-number-topics"><?php print $item->total_topics ?> <?php print t('topics') ?></span>
                     <?php if ($item->new_topics): ?>
                       <div class="forum-number-new-topics">
                         <a href="<?php print $item->new_topics_link; ?>"><?php print $item->new_topics_text; ?></a>
                       </div>
                     <?php endif; ?>
                   </div>
-                </td>
-
-                <td class="forum-number-posts">
-                  <?php print $item->total_posts ?>
-
-                  <?php if ($item->new_posts): ?>
-                    <br />
-                    <a href="<?php print $item->new_posts_link; ?>"><?php print $item->new_posts_text; ?></a>
-                  <?php endif; ?>
+                  <div class="forum-number-posts-with-new">
+                    <span class="forum-number-posts"><?php print $item->total_posts ?> <?php print t('posts') ?></span>
+                    <?php if ($item->new_posts): ?>
+                      <div class="forum-numer-new-posts">
+                        <a href="<?php print $item->new_posts_link; ?>"><?php print $item->new_posts_text; ?></a>
+                      </div>
+                    <?php endif; ?>
+                  </div>
                 </td>
                 <td class="forum-last-reply">
                   <?php print $item->last_post ?>
