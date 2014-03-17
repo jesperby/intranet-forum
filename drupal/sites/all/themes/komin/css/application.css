@@ -355,6 +355,10 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
     margin: 0;
     padding: 0; }
 
+/* Collapsed Container */
+.forum-table-name.container-collapsed {
+  border-bottom: 1px solid #cccccc; }
+
 /* Sticky Header */
 .sticky-header {
   background: #fff;

@@ -126,9 +126,6 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
   .forum-table {
     margin-bottom:0;
   }
-  .container-collapsed{
-    $border-bottom:$borderColor 1px solid;
-  }
   .forum-subforums {
     margin-top:.6em;
     span {
@@ -140,6 +137,11 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
       padding:0;
     }
   }
+}
+
+/* Collapsed Container */
+.forum-table-name.container-collapsed {
+  border-bottom:1px solid $borderColor;
 }
 
 /* Sticky Header */
