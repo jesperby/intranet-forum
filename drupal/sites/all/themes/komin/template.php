@@ -507,6 +507,25 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
   return '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '">' . $name . '</a>' . $picture . '</div>';
 }
 
+function komin_advanced_forum_subforum_list(&$variables) {
+  $result = '<ul>';
+  foreach ($variables['subforum_list'] as $tid => $subforum) {
+    $text = l($subforum->name, "forum/$tid");
+    $text .= ' (' . $subforum->total_posts;
+
+    if (empty($subforum->new_posts)) {
+      $text .= ')';
+    }
+    else {
+      $text .= ' - ' . l($subforum->new_posts_text, $subforum->new_posts_path, array('fragment' => 'new')) . ')';
+    }
+
+    $result .= '<li>' . $text . '</li>';
+  }
+  $result .= '</ul>';
+  return $result;
+}
+
 /**
  * Displays the username more or less everywhere.
  */
