@@ -423,6 +423,9 @@ table tr.even {
   width: 1em;
   overflow: hidden; }
 
+.box .forum-table-name a {
+  color: #fff; }
+
 /* Collapsed Container */
 .forum-table-name.container-collapsed {
   border-bottom: 1px solid #cccccc; }
@@ -431,6 +434,11 @@ table tr.even {
 .sticky-header {
   background: #fff;
   margin-top: -1px; }
+
+/* Single Forum Description */
+.forum-table-description p {
+  padding: .4em .6em;
+  margin: 0; }
 
 /* Forum Super Header */
 .forum-collapsible {

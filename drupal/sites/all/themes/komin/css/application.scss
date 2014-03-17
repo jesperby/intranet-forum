@@ -85,7 +85,6 @@ table {
 
   }
 }
-
 .forum-list-icon-new-posts span,
 .forum-list-text-legend-new-posts,
 .topic-icon-new {
@@ -185,7 +184,14 @@ table {
     overflow:hidden;
   }
 }
+.box {
+  .forum-table-name {
+    a {
+      color:#fff;
+    }
+  }
 
+}
 /* Collapsed Container */
 .forum-table-name.container-collapsed {
   border-bottom:1px solid $borderColor;
@@ -195,6 +201,14 @@ table {
 .sticky-header {
   background:#fff;
   margin-top:-1px;
+}
+
+/* Single Forum Description */
+.forum-table-description {
+  p {
+    padding:.4em .6em;
+    margin:0;
+  }
 }
 
 
