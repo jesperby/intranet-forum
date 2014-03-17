@@ -26,7 +26,7 @@
 ?>
 
 <?php if ($forums_defined): ?>
-  <div id="forum" class="box light">
+  <div id="forum" class="box">
 
     <?php print $forums; ?>
 

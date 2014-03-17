@@ -35,6 +35,9 @@
     <?php if (!empty($action_links)): ?>
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
+    <?php $title = drupal_get_title(); if (!empty($title)): ?>
+      <h1><?php print $title; ?></h1>
+    <?php endif; ?>
     <?php print render($page['content']); ?>
   </article>
 
