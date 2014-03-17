@@ -24,7 +24,7 @@
   <?php endif; ?>
 
   <article>
-    <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+    <?php if (!empty($breadcrumb) && empty($tabs['#primary'])): print $breadcrumb; endif; ?>
     <?php print $messages; ?>
     <?php if (!empty($tabs)): ?>
       <?php print render($tabs); ?>
