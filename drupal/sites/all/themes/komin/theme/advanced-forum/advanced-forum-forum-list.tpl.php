@@ -60,7 +60,6 @@
         <?php endif; ?>
       </div>
       <div class="forum-table-description"><?php print $table_info->description; ?></div>
-
     </div>
     <div id="forum-table-<?php print $table_info->tid; ?>">
       <table class="full forum-table forum-table-forums">
@@ -91,8 +90,7 @@
                 </td>
               <?php endif; ?>
 
-              <?php $colspan = ($item->is_container) ? 4 : 1 ?>
-              <td class="forum-details" colspan="<?php print $colspan ?>">
+              <td class="forum-details">
                 <div class="forum-name">
                   <a href="<?php print $item->link; ?>"><?php print $item->name; ?></a>
                 </div>
@@ -114,25 +112,25 @@
                   </div>
                 <?php endif; ?>
               </td>
+              <td class="forum-number-topics-and-posts" <?php if($item->is_container): ?>colspan="2"<?php endif; ?>>
+                <div class="forum-number-topics-with-new">
+                  <span class="forum-number-topics"><?php print $item->total_topics ?> <?php print t('topics') ?></span>
+                  <?php if ($item->new_topics): ?>
+                    <div class="forum-number-new-topics">
+                      <a href="<?php print $item->new_topics_link; ?>"><?php print $item->new_topics_text; ?></a>
+                    </div>
+                  <?php endif; ?>
+                </div>
+                <div class="forum-number-posts-with-new">
+                  <span class="forum-number-posts"><?php print $item->total_posts ?> <?php print t('posts') ?></span>
+                  <?php if ($item->new_posts): ?>
+                    <div class="forum-numer-new-posts">
+                      <a href="<?php print $item->new_posts_link; ?>"><?php print $item->new_posts_text; ?></a>
+                    </div>
+                  <?php endif; ?>
+                </div>
+              </td>
               <?php if (!$item->is_container): ?>
-                <td class="forum-number-topics-and-posts">
-                  <div class="forum-number-topics-with-new">
-                    <span class="forum-number-topics"><?php print $item->total_topics ?> <?php print t('topics') ?></span>
-                    <?php if ($item->new_topics): ?>
-                      <div class="forum-number-new-topics">
-                        <a href="<?php print $item->new_topics_link; ?>"><?php print $item->new_topics_text; ?></a>
-                      </div>
-                    <?php endif; ?>
-                  </div>
-                  <div class="forum-number-posts-with-new">
-                    <span class="forum-number-posts"><?php print $item->total_posts ?> <?php print t('posts') ?></span>
-                    <?php if ($item->new_posts): ?>
-                      <div class="forum-numer-new-posts">
-                        <a href="<?php print $item->new_posts_link; ?>"><?php print $item->new_posts_text; ?></a>
-                      </div>
-                    <?php endif; ?>
-                  </div>
-                </td>
                 <td class="forum-last-reply">
                   <?php print $item->last_post ?>
                 </td>
