@@ -125,9 +125,14 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 .forum-table-wrap {
   .forum-table {
     margin-bottom:0;
+
+    .forum-name {
+      font-weight:bold;
+    }
   }
   .forum-subforums {
     margin-top:.6em;
+
     span {
       font-weight:bold;
     }
