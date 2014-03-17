@@ -45,10 +45,10 @@ aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@media (max-width: 50em) {
+@media (max-width: 60em) {
   article {
-    width: 48%;
-    margin-right: 0;
+    width: 65.33333%;
+    margin-right: 4%;
     float: left;
     -ms-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -56,6 +56,15 @@ aside {
     box-sizing: border-box; }
 
   aside {
+    width: 30.66667%;
+    margin-right: 0;
+    float: left;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; } }
+@media (max-width: 40em) {
+  article {
     width: 100%;
     margin-right: 4%;
     margin-right: 0;
@@ -64,9 +73,9 @@ aside {
     -ms-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; } }
-@media (max-width: 40em) {
-  article {
+    box-sizing: border-box; }
+
+  aside {
     width: 100%;
     margin-right: 4%;
     margin-right: 0;
@@ -262,48 +271,43 @@ aside {
 table tr.even {
   background: whitesmoke; }
 
-/* Icons */
-.forum-list-icon,
-.views-field-topic-icon {
-  width: 26px; }
-
-.forum-list-icon-wrapper span,
-.topic-icon {
-  width: 42px;
-  height: 42px;
-  display: block;
-  background: whitesmoke;
-  text-indent: -300em;
-  border-radius: 100%; }
-
-tr.even td.forum-list-icon-default .forum-list-icon-wrapper span,
-tr.odd td.forum-list-icon-default .forum-list-icon-wrapper span,
-.forum-list-icon-legend .forum-list-icon-default,
-.topic-icon-default {
-  background: #c2c2c2 url(../img/icon-default.svg) 50% 50% no-repeat;
-  background-size: 60%; }
-
-tr.even td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
-tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
-.forum-list-icon-legend .forum-list-icon-new-posts,
-.topic-icon-new {
-  background: #578e55 url(../img/icon-new.svg) 50% 50% no-repeat;
-  background-size: 60%; }
-
-/* Topic List Icons */
-.topic-icon-hot {
-  background: #d43f3f url(../img/icon-hot.svg) 50% 50% no-repeat;
-  background-size: 60%; }
-
-.topic-icon-hot-new {
-  background: #D43F3F; }
-
-.topic-icon-sticky {
-  background: #CEBC31; }
-
-.topic-icon-closed {
-  background: #545454 url(../img/icon-hot.svg) 50% 50% no-repeat;
-  background-size: 60%; }
+/* Topic Icons */
+.forum-topic-legend {
+  font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+  margin-top: .6em;
+  font-size: .8125em;
+  border-top: 1px solid #cccccc; }
+  .forum-topic-legend div {
+    width: 30.66667%;
+    margin-right: 4%;
+    float: left;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.4em .7em;
+    margin-right: 0;
+    /* Override layout.scss */ }
+    @media (max-width: 60em) {
+      .forum-topic-legend div {
+        width: 48%;
+        margin-right: 0;
+        float: left;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; } }
+    @media (max-width: 40em) {
+      .forum-topic-legend div {
+        width: 100%;
+        margin-right: 4%;
+        margin-right: 0;
+        float: none;
+        float: left;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; } }
 
 /* More Link */
 .more-link {
@@ -356,6 +360,8 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
     list-style: none;
     margin: 0;
     padding: 0; }
+    .forum-table-wrap .forum-subforums ul li {
+      margin-left: 0; }
 
 /* Collapsed Container */
 .forum-table-name.container-collapsed {

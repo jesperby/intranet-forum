@@ -16,17 +16,20 @@ aside {
   @include columns(3, true);
 }
 
-@media (max-width: 50em) {
+@media (max-width: 60em) {
   article {
-    @include columns(6, true);
+    @include columns(8);
   }
   aside {
-    @include columns(12);
+    @include columns(4, true);
   }
 }
 
 @media (max-width: 40em) {
   article {
+    @include columns(12);
+  }
+  aside {
     @include columns(12);
   }
 }
