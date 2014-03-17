@@ -59,7 +59,7 @@
   <?php endif; ?>
 
   <?php if ($node_create_list): ?>
-    <div class="forum-node-create-links forum-node-create-links-top"><?php print $node_create_list ?></div>
+    <div class="box-content forum-node-create-links forum-node-create-links-top"><?php print $node_create_list ?></div>
   <?php endif; ?>
 
   <?php if ($pager): ?>
@@ -76,7 +76,7 @@
     </div>
   <?php endif; ?>
 
-  <div class="forum-node-create-links"><?php print $node_create_list ?></div>
+  <div class="forum-node-create-links box-content"><?php print $node_create_list ?></div>
 
   <?php if ($pager): ?>
     <div class="forum-pager clearfix" id="forum-pager-bottom"><?php print $pager; ?></div>
