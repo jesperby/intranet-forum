@@ -324,7 +324,7 @@ table tr.even {
         -moz-box-sizing: border-box;
         box-sizing: border-box; } }
 
-.forum-list-icon-new-posts,
+.forum-list-icon-new-posts span,
 .topic-icon-new {
   background-image: url(../img/topic-icon-new.png); }
 
