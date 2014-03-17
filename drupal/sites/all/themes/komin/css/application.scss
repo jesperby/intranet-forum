@@ -32,16 +32,33 @@ table {
 }
 
 /* Topic Icons */
+.forum-list-icon,
+.views-field-topic-icon {
+  width:27px;
+}
+
+.forum-list-icon span,
+.topic-icon {
+  text-indent:-900em;
+  display:block;
+  width:27px;
+  height:27px;
+}
+
 .forum-topic-legend {
   font-family:$sansSerif;
   margin-top:.6em;
+  padding-top:.6em;
   font-size:.8125em;
   border-top:1px solid $borderColor;
 
   div {
     @include columns(4);
-    padding:0.4em .7em;
+    padding:.4em .7em .4em 3em;
     margin-right:0; /* Override layout.scss */
+    margin-bottom:.6em;
+    background-repeat:no-repeat;
+    background-position:.6em 50%;
 
     @media (max-width: 60em) {
       @include columns(6, true);
@@ -50,11 +67,29 @@ table {
       @include columns(12);
     }
   }
-  .topic-icon-new:before {
-
-  }
 }
-
+.topic-icon-new {
+  background-image:url(../img/topic-icon-new.png)
+}
+.forum-list-icon-default span,
+.topic-icon-default {
+  background-image:url(../img/topic-icon-default.png)
+}
+.topic-icon-hot-new {
+  background-image:url(../img/topic-icon-hot-new.png)
+}
+.topic-icon-hot {
+  background-image:url(../img/topic-icon-hot.png)
+}
+.topic-icon-hot {
+  background-image:url(../img/topic-icon-hot.png)
+}
+.topic-icon-sticky {
+  background-image:url(../img/topic-icon-sticky.png)
+}
+.topic-icon-closed {
+  background-image:url(../img/topic-icon-closed.png)
+}
 
 /* More Link */
 .more-link {
