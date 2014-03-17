@@ -45,7 +45,8 @@ table {
   height:27px;
 }
 
-.forum-topic-legend {
+.forum-topic-legend,
+.forum-list-icon-legend {
   font-family:$sansSerif;
   margin-top:.6em;
   padding-top:.6em;
@@ -68,11 +69,30 @@ table {
     }
   }
 }
+.forum-list-icon-legend {
+  div {
+    padding:0;
+    .forum-list-icon-wrapper {
+      display:none;
+    }
+    span {
+      padding:.4em .7em .4em 3em;
+      display: block;
+      background-repeat:no-repeat;
+      background-position:.6em 50%;
+      margin-bottom:.6em;
+    }
+
+  }
+}
+
 .forum-list-icon-new-posts span,
+.forum-list-text-legend-new-posts,
 .topic-icon-new {
   background-image:url(../img/topic-icon-new.png)
 }
 .forum-list-icon-default span,
+.forum-list-text-legend-default,
 .topic-icon-default {
   background-image:url(../img/topic-icon-default.png)
 }
