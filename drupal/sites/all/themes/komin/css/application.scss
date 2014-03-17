@@ -129,6 +129,17 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
   .container-collapsed{
     $border-bottom:$borderColor 1px solid;
   }
+  .forum-subforums {
+    margin-top:.6em;
+    ul {
+      list-style:none;
+      margin:0;
+      padding:0;
+      li {
+        margin:0;
+      }
+    }
+  }
 }
 
 /* Sticky Header */

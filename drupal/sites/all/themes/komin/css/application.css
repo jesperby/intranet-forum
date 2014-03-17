@@ -346,6 +346,14 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 /* Forum */
 .forum-table-wrap .forum-table {
   margin-bottom: 0; }
+.forum-table-wrap .forum-subforums {
+  margin-top: .6em; }
+  .forum-table-wrap .forum-subforums ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .forum-table-wrap .forum-subforums ul li {
+      margin: 0; }
 
 /* Sticky Header */
 .sticky-header {
