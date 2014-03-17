@@ -29,6 +29,10 @@
 
 <div id="<?php print $post_id; ?>" class="box light <?php print $classes; ?>" <?php print $attributes; ?>>
   <div class="forum-post-info box-title clearfix">
+    <?php if ($top_post && $title): ?>
+      <?php print $title ?>
+    <?php endif; ?>
+
     <div class="forum-posted-on">
       <?php print $date ?>
 
@@ -53,12 +57,7 @@
     </div>
 
     <div class="forum-post-panel-main body-copy clearfix">
-      <?php if ($top_post && $title): ?>
-        <h2 class="post-title">
-          <?php print $title ?>
-        </h2>
-      <?php endif; ?>
-
+      
       <div class="forum-post-content">
         <?php
           // We hide the comments and links now so that we can render them later.
