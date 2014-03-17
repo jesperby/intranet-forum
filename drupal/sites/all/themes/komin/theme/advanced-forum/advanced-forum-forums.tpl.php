@@ -40,12 +40,12 @@
       <?php print $topic_legend; ?>
     <?php endif; ?>
 
-    <?php if (!empty($forum_legend)): ?>
-      <?php print $forum_legend; ?>
-    <?php endif; ?>
-
-    <?php if (false && !empty($forum_statistics)): ?>
-      <?php print $forum_statistics; ?>
-    <?php endif; ?>
   </div>
+  <?php if (!empty($forum_legend)): ?>
+    <?php print $forum_legend; ?>
+  <?php endif; ?>
+
+  <?php if (false && !empty($forum_statistics)): ?>
+    <?php print $forum_statistics; ?>
+  <?php endif; ?> 
 <?php endif; ?>
