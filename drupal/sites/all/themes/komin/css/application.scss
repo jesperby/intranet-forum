@@ -68,6 +68,7 @@ table {
     }
   }
 }
+.forum-list-icon-new-posts,
 .topic-icon-new {
   background-image:url(../img/topic-icon-new.png)
 }
@@ -127,10 +128,10 @@ table {
 
 /* .a11y from utils.css.scss */
 .element-invisible {
-  position: absolute;
-  left: -300em;
-  width: 1em;
-  overflow: hidden;
+  position:absolute;
+  left:-300em;
+  width:1em;
+  overflow:hidden;
 }
 
 /* Forum */
@@ -156,6 +157,12 @@ table {
         margin-left:0;
       }
     }
+  }
+  .forum-subforums-label {
+    position:absolute;
+    left:-300em;
+    width:1em;
+    overflow:hidden;
   }
 }
 
