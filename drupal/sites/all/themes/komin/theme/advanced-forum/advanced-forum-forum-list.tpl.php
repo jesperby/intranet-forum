@@ -112,7 +112,7 @@
                   </div>
                 <?php endif; ?>
               </td>
-              <td class="forum-number-topics-and-posts" <?php if($item->is_container): ?>colspan="2"<?php endif; ?>>
+              <td class="forum-number-topics-and-posts">
                 <div class="forum-number-topics-with-new">
                   <span class="forum-number-topics"><?php print $item->total_topics ?> <?php print t('topics') ?></span>
                   <?php if ($item->new_topics): ?>
@@ -130,11 +130,23 @@
                   <?php endif; ?>
                 </div>
               </td>
-              <?php if (!$item->is_container): ?>
-                <td class="forum-last-reply">
+              <td class="forum-last-reply">
+                <?php if ($item->is_container && ! empty($item->subforum_list)): ?>
+                  <?php
+                    $lastTime = 0;
+                    $last = null;
+                    foreach($item->subforum_list as $sf) {
+                      if(empty($last) || (! empty($sf->last_post_obj->created) && $sf->last_post_obj->created > $lastTime)) {
+                        $lastTime = empty($sf->last_post_obj->created) ? 0 : $sf->last_post_obj->created;
+                        $last = $sf->last_post;
+                      }
+                    }
+                    print_r($last);
+                  ?>
+                <?php elseif(! empty($item->last_post)): ?>
                   <?php print $item->last_post ?>
-                </td>
-              <?php endif; ?>
+                <?php endif; ?>
+              </td>
 
             </tr>
 
