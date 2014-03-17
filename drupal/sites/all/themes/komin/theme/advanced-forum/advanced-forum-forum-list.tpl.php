@@ -59,7 +59,9 @@
           <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible icon-caret-down icon-large" ><span class="a11y">Visa/Dölj</span></span>
         <?php endif; ?>
       </div>
-      <div class="forum-table-description"><?php print $table_info->description; ?></div>
+      <?php if(! empty($table_info->description)): ?>
+      <div class="forum-table-description"><p><?php print $table_info->description; ?></p></div>
+      <?php endif; ?>
     </div>
     <div id="forum-table-<?php print $table_info->tid; ?>">
       <table class="full forum-table forum-table-forums">
