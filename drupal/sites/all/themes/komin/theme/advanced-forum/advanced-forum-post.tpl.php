@@ -71,12 +71,6 @@
     </div>
 
     <div class="forum-post-panel-main clearfix">
-      <?php if ($top_post && !empty($title)): ?>
-        <h2 class="forum-post-title">
-          <?php print $title ?>
-        </h2>
-      <?php endif; ?>
-
       <div class="forum-post-content">
         <?php
         // We hide the comments and links now so that we can render them later.
