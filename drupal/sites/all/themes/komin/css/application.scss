@@ -259,6 +259,18 @@ table {
   }
 }
 
+/* Forum Topic Header */
+.forum-topic-header {
+  margin-bottom:1em;
+
+  .last-post-link {
+    margin-top:.6em;
+  }
+  .topic-post-count {
+    margin-bottom:.6em;
+  }
+}
+
 .forum-post-footer {
   border-top:1px solid $borderColor;
   padding:.6em;
