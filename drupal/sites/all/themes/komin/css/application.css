@@ -347,6 +347,11 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 .forum-table-wrap .forum-table {
   margin-bottom: 0; }
 
+/* Sticky Header */
+.sticky-header {
+  background: #fff;
+  margin-top: -1px; }
+
 /* Forum Super Header */
 .forum-collapsible {
   cursor: pointer;
