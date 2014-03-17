@@ -522,6 +522,22 @@ aside #block-forum-new .box-title {
 aside #block-node-recent .box-content,
 aside #block-forum-new .box-content {
   margin: 0; }
+  aside #block-node-recent .box-content .item-list ul,
+  aside #block-forum-new .box-content .item-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "OpenSans", "Droid Sans", Verdana, "DejaVu Sans", "Bitstream Vera Sans", sans-serif;
+    font-size: 0.8125em;
+    line-height: 1.35; }
+    aside #block-node-recent .box-content .item-list ul li,
+    aside #block-forum-new .box-content .item-list ul li {
+      margin: 0;
+      padding: .4em .6em;
+      border-bottom: #cccccc 1px solid; }
+      aside #block-node-recent .box-content .item-list ul li:nth-child(even),
+      aside #block-forum-new .box-content .item-list ul li:nth-child(even) {
+        background: whitesmoke; }
 aside #block-node-recent table,
 aside #block-forum-new table {
   width: 100%;
