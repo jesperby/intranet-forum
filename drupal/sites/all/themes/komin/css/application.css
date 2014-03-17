@@ -346,8 +346,6 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
 /* Forum */
 .forum-table-wrap .forum-table {
   margin-bottom: 0; }
-.forum-table-wrap .container-collapsed {
-  border-bottom: 1px solid #cccccc; }
 .forum-table-wrap .forum-subforums {
   margin-top: .6em; }
   .forum-table-wrap .forum-subforums span {
@@ -356,6 +354,10 @@ tr.odd td.forum-list-icon-new-posts .forum-list-icon-wrapper span,
     list-style: none;
     margin: 0;
     padding: 0; }
+
+/* Collapsed Container */
+.forum-table-name.container-collapsed {
+  border-bottom: 1px solid #cccccc; }
 
 /* Sticky Header */
 .sticky-header {
