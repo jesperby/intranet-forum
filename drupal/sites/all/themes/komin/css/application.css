@@ -396,17 +396,23 @@ table tr.even {
   box-sizing: border-box; }
 
 /* .a11y from utils.css.scss */
-.element-invisible {
+.element-invisible,
+.marker {
   position: absolute;
   left: -300em;
   width: 1em;
   overflow: hidden; }
 
 /* Forum */
-.forum-table-wrap .forum-table {
+.forum-table {
   margin-bottom: 0; }
-  .forum-table-wrap .forum-table .forum-name {
+  .forum-table .forum-name,
+  .forum-table .forum-topic-title,
+  .forum-table .views-field-title > a {
     font-weight: bold; }
+  .forum-table a.forum-author {
+    font-weight: normal; }
+
 .forum-table-wrap .forum-subforums {
   margin-top: .6em; }
   .forum-table-wrap .forum-subforums span {
@@ -456,7 +462,7 @@ table tr.even {
   float: right; }
 
 .indented {
-  margin-left: 2em; }
+  margin-left: 1em; }
 
 /* Forum Post */
 .forum-post-panel-sub {
@@ -519,6 +525,21 @@ table tr.even {
     list-style: none;
     margin: 0;
     padding: 0; }
+  .forum-post-footer .forum-post-links li {
+    float: right; }
+
+/* Views */
+.view-empty {
+  padding: 1.4em .6em; }
+  .view-empty p {
+    margin: 0; }
+
+.view-empty.error {
+  padding: .5em .8em;
+  margin: 0 .6em; }
+
+.views-submit-button {
+  padding-bottom: .6em; }
 
 /* Sidebar Content */
 aside #block-node-recent .box-title,

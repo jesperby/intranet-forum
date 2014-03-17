@@ -146,7 +146,8 @@ table {
 }
 
 /* .a11y from utils.css.scss */
-.element-invisible {
+.element-invisible,
+.marker {
   position:absolute;
   left:-300em;
   width:1em;
@@ -154,14 +155,19 @@ table {
 }
 
 /* Forum */
-.forum-table-wrap {
-  .forum-table {
-    margin-bottom:0;
+.forum-table {
+  margin-bottom:0;
 
-    .forum-name {
-      font-weight:bold;
-    }
+  .forum-name,
+  .forum-topic-title,
+  .views-field-title > a {
+    font-weight:bold;
   }
+  a.forum-author {
+    font-weight:normal;
+  }
+}
+.forum-table-wrap {
   .forum-subforums {
     margin-top:.6em;
 
@@ -232,7 +238,7 @@ table {
   float: right;
 }
 .indented {
-  margin-left:2em;
+  margin-left:1em;
 }
 
 
@@ -282,7 +288,27 @@ table {
       margin:0;
       padding:0;
     }
+    li {
+      float:right;
+    }
   }
+}
+
+
+
+/* Views */
+.view-empty {
+  padding:1.4em .6em;
+  p {
+    margin:0
+  }
+}
+.view-empty.error {
+  padding:.5em .8em;
+  margin:0 .6em;
+}
+.views-submit-button {
+  padding-bottom:.6em;
 }
 
 
