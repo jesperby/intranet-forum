@@ -13,7 +13,6 @@ dependencies[] = forum
 dependencies[] = forum_access
 dependencies[] = locale
 dependencies[] = mail_edit
-dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = subscriptions
 dependencies[] = subscriptions_content

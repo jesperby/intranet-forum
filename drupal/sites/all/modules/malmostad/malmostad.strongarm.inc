@@ -29,17 +29,17 @@ function malmostad_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
-    'language' => 'en',
-    'name' => 'English',
-    'native' => 'English',
+    'language' => 'sv',
+    'name' => 'Swedish',
+    'native' => 'Svenska',
     'direction' => '0',
     'enabled' => 1,
-    'plurals' => '0',
-    'formula' => '',
+    'plurals' => '2',
+    'formula' => '($n!=1)',
     'domain' => '',
-    'prefix' => 'en',
+    'prefix' => 'sv',
     'weight' => '0',
-    'javascript' => '',
+    'javascript' => 'vgCRA5zRmD7oh2nO8aVp-RaLHmmoUjPgHT3vcnRYxC0',
   );
   $export['language_default'] = $strongarm;
 
