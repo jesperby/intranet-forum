@@ -45,7 +45,7 @@
     <?php print $forum_legend; ?>
   <?php endif; ?>
 
-  <?php if (!empty($topic_legend)): ?>
+  <?php if (empty($topics) && !empty($topic_legend)): ?>
     <?php print $topic_legend; ?>
   <?php endif; ?>
 
