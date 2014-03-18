@@ -589,3 +589,13 @@ function komin_status_messages($variables) {
   }
   return $output;
 }
+
+function komin_tablesort_indicator($variables) {
+  if ($variables['style'] == "asc") {
+    $class = 'icon-caret-down';
+  } else {
+    $class = 'icon-caret-up';
+  }
+
+  return ' <span class="icon-large ' . $class . '"></span>';
+}
