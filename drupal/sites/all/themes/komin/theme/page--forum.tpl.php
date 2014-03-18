@@ -18,12 +18,12 @@
 
 <div class="wrapper">
   <?php if (!empty($page['sidebar_first'])): ?>
-    <aside>
+    <aside role="complementary">
       <?php print render($page['sidebar_first']); ?>
     </aside>
   <?php endif; ?>
 
-  <article>
+  <article role="main">
     <?php if (!empty($breadcrumb) && empty($tabs['#primary'])): print $breadcrumb; endif; ?>
     <?php print $messages; ?>
     <?php if (!empty($tabs)): ?>
@@ -42,7 +42,7 @@
   </article>
 
   <?php if (!empty($page['sidebar_second'])): ?>
-    <aside>
+    <aside role="complementary">
       <?php print render($page['sidebar_second']); ?>
     </aside>
   <?php endif; ?>
