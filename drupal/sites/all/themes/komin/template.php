@@ -329,7 +329,7 @@ function komin_form_element_label(&$variables) {
   }
   // Show label only to screen readers to avoid disruption in visual flows.
   elseif ($element['#title_display'] == 'invisible') {
-    $attributes['class'][] = 'element-invisible';
+    $attributes['class'][] = 'a11y';
   }
 
   // Malmostad
