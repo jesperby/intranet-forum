@@ -32,7 +32,7 @@
  * @ingroup views_templates
  */
 ?>
-
+<h1 class="box-title"><title></h1>
 <div class="<?php print $classes; ?>">
   <?php if (!empty($admin_links)): ?>
     <div class="views-admin-links views-hide">
