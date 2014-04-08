@@ -355,9 +355,6 @@ table tr.even {
 .topic-icon-hot {
   background-image: url(../img/topic-icon-hot.png); }
 
-.topic-icon-hot {
-  background-image: url(../img/topic-icon-hot.png); }
-
 .topic-icon-sticky {
   background-image: url(../img/topic-icon-sticky.png); }
 
@@ -412,6 +409,8 @@ table tr.even {
     font-weight: bold; }
   .forum-table a.forum-author {
     font-weight: normal; }
+  .forum-table thead a {
+    color: #000; }
 
 .forum-table-wrap .forum-subforums {
   margin-top: .6em; }
@@ -616,3 +615,38 @@ ul.vertical-tabs-list {
     background: #eee; }
   .vertical-tab-button .summary {
     display: block; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .forum-list-icon-new-posts span,
+  .forum-list-text-legend-new-posts,
+  .topic-icon-new,
+  .forum-list-icon-default span,
+  .forum-list-text-legend-default,
+  .topic-icon-default,
+  .topic-icon-hot-new,
+  .topic-icon-hot,
+  .topic-icon-sticky,
+  .topic-icon-closed {
+    background-size: 27px 27px; }
+
+  .forum-list-icon-new-posts span,
+  .forum-list-text-legend-new-posts,
+  .topic-icon-new {
+    background-image: url(../img/topic-icon-new@2x.png); }
+
+  .forum-list-icon-default span,
+  .forum-list-text-legend-default,
+  .topic-icon-default {
+    background-image: url(../img/topic-icon-default@2x.png); }
+
+  .topic-icon-hot-new {
+    background-image: url(../img/topic-icon-hot-new@2x.png); }
+
+  .topic-icon-hot {
+    background-image: url(../img/topic-icon-hot@2x.png); }
+
+  .topic-icon-sticky {
+    background-image: url(../img/topic-icon-sticky@2x.png); }
+
+  .topic-icon-closed {
+    background-image: url(../img/topic-icon-closed@2x.png); } }
