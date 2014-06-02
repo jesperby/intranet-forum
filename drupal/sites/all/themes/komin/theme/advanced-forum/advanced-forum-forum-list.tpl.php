@@ -47,7 +47,7 @@
 <?php foreach ($tables as $table_id => $table): ?>
   <?php $table_info = $table['table_info']; ?>
 
-  <div class="forum-table-wrap wrap">
+  <div class="forum-table-wrap wrap box">
     <div class="forum-table-superheader">
       <div class="forum-table-name box-title">
         <?php if (empty($table_info->link)): ?>
