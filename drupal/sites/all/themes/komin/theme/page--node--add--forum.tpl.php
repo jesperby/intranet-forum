@@ -1,3 +1,4 @@
+<?php  /*
 <header>
   <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
     <div>
@@ -15,8 +16,9 @@
     </div>
   <?php endif; ?>
 </header>
-
-<div class="wrapper">
+*/
+?>
+<div class="wrapper 000">
   <?php if (!empty($page['sidebar_first'])): ?>
     <aside>
       <?php print render($page['sidebar_first']); ?>

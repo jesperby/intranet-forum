@@ -1,3 +1,4 @@
+<?php  /*
 <header>
   <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
     <div>
@@ -15,7 +16,8 @@
     </div>
   <?php endif; ?>
 </header>
-
+*/
+?>
 <div class="wrapper">
   <?php if (!empty($page['sidebar_first'])): ?>
     <aside>
@@ -35,11 +37,11 @@
     <?php if (!empty($action_links)): ?>
       <ul class="action-links"><?php print render($action_links); ?></ul>
     <?php endif; ?>
-    <?php $content = render($page['content']); 
-        $title = drupal_get_title(); if (!empty($title)): 
+    <?php $content = render($page['content']);
+        $title = drupal_get_title(); if (!empty($title)):
         $content = str_replace('<title>', $title, $content);
     ?>
-    <?php endif; 
+    <?php endif;
         print $content;
     ?>
   </article>
