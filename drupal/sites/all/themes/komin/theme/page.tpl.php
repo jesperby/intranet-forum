@@ -2,7 +2,7 @@
   <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
     <div>
       <nav role="navigation">
-        <?php if (!empty($primary_nav)): ?>
+<?php if (!empty($primary_nav)): ?>
           <?php print render($primary_nav); ?>
         <?php endif; ?>
         <?php if (!empty($secondary_nav)): ?>
@@ -50,6 +50,3 @@
   <?php endif; ?>
 
 </div>
-<footer class="bigfoot">
-  <?php print render($page['footer']); ?>
-</footer>
