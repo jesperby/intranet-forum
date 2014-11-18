@@ -636,6 +636,9 @@ ul.vertical-tabs-list {
   .vertical-tab-button .summary {
     display: block; }
 
+.field-type-file .fieldset-description {
+  font-size: 13px; }
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .forum-list-icon-new-posts span,
   .forum-list-text-legend-new-posts,
