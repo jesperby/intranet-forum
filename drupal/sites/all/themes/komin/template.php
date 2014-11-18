@@ -138,7 +138,7 @@ function komin_advanced_forum_reply_link(&$variables) {
         'text' => $reply_link['title'],
         'path' => $reply_link['href'],
         'options' => $reply_link['options'],
-        'button_class' => 'btn-primary'
+        'button_class' => 'btn-info'
       )
     );
     return $output;
