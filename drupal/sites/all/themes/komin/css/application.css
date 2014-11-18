@@ -20,7 +20,7 @@
     height: auto; } }
 @media (max-width: 640px) {
   .box {
-    border-radius: 0; }
+    border-radius: 0 !important; }
 
   .box-title, .breadcrumb, .forum-topic-header {
     margin: 0 10px; } }
@@ -421,6 +421,8 @@ table tr.even {
 /* Forum */
 .forum-table {
   margin-bottom: 0; }
+  .forum-table th.views-field img {
+    margin-left: 0.5em; }
   .forum-table .forum-name,
   .forum-table .forum-topic-title,
   .forum-table .views-field-title > a {

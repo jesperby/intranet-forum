@@ -167,6 +167,9 @@ table {
 
 /* Forum */
 .forum-table {
+	th.views-field img {
+		margin-left: 0.5em;
+	}
 	margin-bottom:0;
 
 	.forum-name,
