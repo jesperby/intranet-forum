@@ -25,3 +25,12 @@
     }
   }
 }
+@media ( max-width: 640px ) {
+  .box{
+     border-radius: 0 !important;
+  }
+  .box-title, .breadcrumb, .forum-topic-header {
+    margin: 0 10px;
+  }
+}
+
