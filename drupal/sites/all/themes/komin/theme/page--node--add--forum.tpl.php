@@ -47,6 +47,3 @@
  </article>
 
 </div>
-<footer class="bigfoot">
-  <?php print render($page['footer']); ?>
-</footer>

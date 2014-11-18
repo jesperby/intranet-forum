@@ -51,6 +51,3 @@
   <?php endif; ?>
 
 </div>
-<footer class="bigfoot">
-  <?php print render($page['footer']); ?>
-</footer>
