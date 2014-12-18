@@ -28,7 +28,7 @@
 <div id="<?php print $post_id; ?>" class="box light <?php print $classes; ?>" <?php print $attributes; ?>>
   <div class="forum-post-info box-title clearfix">
     <div class="forum-posted-on">
-      <?php print $date ?>
+      <?php echo date("Y-m-d h:m", $node->created); ?>
 
       <?php
       // This whole section is for printing the "new" marker. With core comment

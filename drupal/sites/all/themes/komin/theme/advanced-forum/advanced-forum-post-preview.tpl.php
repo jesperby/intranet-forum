@@ -17,7 +17,6 @@
  * - $account: User object of the post author.
  * - $name: User name of post author.
  * - $author_pane: Entire contents of advanced_forum-author-pane.tpl.php.
-
  */
 ?>
 
@@ -34,7 +33,7 @@
     <?php endif; ?>
 
     <div class="forum-posted-on">
-      <?php print $date ?>
+      <?php echo date("Y-m-d h:m", $node->created); ?>
 
       <?php if (!$top_post): ?>
         <?php if (!empty($first_new)): ?>
@@ -57,7 +56,7 @@
     </div>
 
     <div class="forum-post-panel-main body-copy clearfix">
-      
+
       <div class="forum-post-content">
         <?php
           // We hide the comments and links now so that we can render them later.
