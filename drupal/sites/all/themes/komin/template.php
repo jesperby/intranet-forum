@@ -592,3 +592,20 @@ function komin_status_messages($variables) {
   }
   return $output;
 }
+function komin_breadcrumb($variables) {
+    if (!empty($variables)){
+        $breadcrumb = $variables['breadcrumb'];
+        $check = l(t('Home'), '<front>');
+        $crumbs = '<div class="breadcrumb">';
+
+        foreach($breadcrumb as $nr => $b){
+            if($b == $check){
+                $breadcrumb[$nr] = l(t('Start'),'https://webapps06.malmo.se/dashboard/');
+            }
+            $crumbs .= $breadcrumb[$nr];
+        }
+
+        $crumbs .="</div>";
+        return $crumbs;
+    }
+}
