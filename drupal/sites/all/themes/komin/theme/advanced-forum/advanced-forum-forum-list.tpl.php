@@ -56,7 +56,7 @@
           <a href="<?php print $table_info->link; ?>"><?php print $table_info->name; ?></a>
         <?php endif; ?>
         <?php if (count($tables) > 1 && $collapsible): ?>
-          <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible icon-caret-down icon-large" ><span class="a11y">Visa/Dölj</span></span>
+          <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible icon-collapse icon-large" ><span class="a11y">Visa/Dölj</span></span>
         <?php endif; ?>
       </div>
       <?php if(! empty($table_info->description)): ?>
