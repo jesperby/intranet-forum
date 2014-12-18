@@ -8,6 +8,7 @@
 ?>
 
 <div class="forum-list-icon-legend clearfix">
+  <h3>Teckenförklaring</h3>
   <div class="forum-list-legend-item">
     <span class="forum-list-icon-wrapper">
       <span class="forum-list-icon-new-posts">

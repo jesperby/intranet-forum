@@ -65,8 +65,11 @@ table {
 	margin-top:.6em;
 	padding-top:.6em;
 	font-size:.8125em;
-	border-top:1px solid $borderColor;
 
+	h3{
+		border-bottom:1px solid $borderColor;
+		padding: 0 4px 3px;
+	}
 	div {
 		@include columns(4);
 		padding:.4em .7em .4em 3em;
@@ -344,7 +347,7 @@ aside {
 			padding: 0 4px 3px;
 			background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 			color: #000000 ;
-			border-bottom: 1px solid #b5b5b5;
+			border-bottom: 1px solid $borderColor;
 			font-weight: 600 !important;
 			font-size:1em;
 
