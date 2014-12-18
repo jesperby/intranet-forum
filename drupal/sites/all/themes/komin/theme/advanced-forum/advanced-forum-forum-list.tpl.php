@@ -50,13 +50,13 @@
   <div class="forum-table-wrap wrap box">
     <div class="forum-table-superheader">
       <div class="forum-table-name box-title">
+        <?php if (count($tables) > 1 && $collapsible): ?>
+          <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible icon-collapse icon-large" ><span class="a11y">Visa/Dölj</span></span>
+        <?php endif; ?>
         <?php if (empty($table_info->link)): ?>
           <?php print $table_info->name; ?>
         <?php else: ?>
           <a href="<?php print $table_info->link; ?>"><?php print $table_info->name; ?></a>
-        <?php endif; ?>
-        <?php if (count($tables) > 1 && $collapsible): ?>
-          <span id="forum-collapsible-<?php print $table_info->tid; ?>" class="forum-collapsible icon-collapse icon-large" ><span class="a11y">Visa/Dölj</span></span>
         <?php endif; ?>
       </div>
       <?php if(! empty($table_info->description)): ?>
