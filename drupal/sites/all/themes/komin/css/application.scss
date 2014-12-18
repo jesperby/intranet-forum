@@ -422,7 +422,9 @@ aside {
 		display: none;
 	}
 }
-
+.tabs a {
+	font-family: "OpenSans","Droid Sans",Verdana,"DejaVu Sans","Bitstream Vera Sans",sans-serif;
+}
 ul.vertical-tabs-list {
 	float: left;
 	font-size: 12px;
