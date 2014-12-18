@@ -422,7 +422,9 @@ aside {
 		display: none;
 	}
 }
-.tabs a {
+.tabs a,
+.forum-topic-header,
+.post-edit-label {
 	font-family: "OpenSans","Droid Sans",Verdana,"DejaVu Sans","Bitstream Vera Sans",sans-serif;
 }
 ul.vertical-tabs-list {
