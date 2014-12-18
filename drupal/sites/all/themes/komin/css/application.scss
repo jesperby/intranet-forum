@@ -1,10 +1,9 @@
 // sass --watch application.scss
 // sass --watch --style compressed  application.scss
 @import 'mixins';
-
+@import 'variables';
 @import 'media-queries';
 @import 'layout';
-@import 'variables';
 @import 'boxes';
 @import 'navs';
 

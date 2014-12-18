@@ -33,4 +33,34 @@
     margin: 0 10px;
   }
 }
+@media ( max-width: 1200px ) {
+  .tabs {
+      border-bottom:none !important;
+      & > li {
+          width: 47.5%;
+          margin-right: 5%;
+          a{
+            color:#000;
+            border-bottom: 1px solid $borderColor !important;
+            &.active {
+            background-color: #eeeeee;
+            border-right: medium none !important;
+            border-left: medium none !important;
+            border-top: medium none !important;
+            }
+          }
+      }
+     & > li:nth-child(even){
+       margin-right: 0;
+     }
+  }
+}
+@media ( max-width: 34em) {
+  .tabs {
+      & > li {
+          width: 100%;
+          margin-right: 0;
+      }
 
+  }
+}
