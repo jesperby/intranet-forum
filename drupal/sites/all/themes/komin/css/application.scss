@@ -27,7 +27,13 @@
 	border:1px solid #ccc;
 	border-bottom:0;
 }
+	@media (max-width: 32em) {
+		.forum-last-reply,
+		.forum-last-post {
+			display: none;
 
+		}
+	}
 /* Breadcrumbs */
 .breadcrumb {
 		margin-bottom:2em;
