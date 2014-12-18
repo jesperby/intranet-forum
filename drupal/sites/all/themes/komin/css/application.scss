@@ -337,7 +337,8 @@ table {
 /* Sidebar Content */
 aside {
 	#block-node-recent,
-	#block-forum-new {
+	#block-forum-new,
+	#block-subscriptions-ui-0 {
 		border:none;
 		table tr.even{
 			background:none;
@@ -394,6 +395,15 @@ aside {
 					 border:0;
 				 }
 			}
+		}
+	}
+	#block-subscriptions-ui-0{
+		legend{
+			display: none;
+			border: medium none !important;
+		}
+		thead {
+			display: none;
 		}
 	}
 
@@ -464,7 +474,14 @@ ul.vertical-tabs-list {
 .field-type-file .fieldset-description {
 	font-size: 13px;
 }
-
+#subscriptions-ui-node-form{
+	.fieldset-title{
+		font-size: 14px;
+	}
+	.help-block{
+		display: none;
+	}
+}
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	.forum-list-icon-new-posts span,
 	.forum-list-text-legend-new-posts,
