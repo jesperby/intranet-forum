@@ -335,9 +335,18 @@ table {
 aside {
 	#block-node-recent,
 	#block-forum-new {
-
+		border:none;
+		table tr.even{
+			background:none;
+		}
 		.box-title {
 			margin-bottom: 0;
+			padding: 0 4px 3px;
+			background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+			color: #000000 ;
+			border-bottom: 1px solid #b5b5b5;
+			font-weight: 600 !important;
+			font-size:1em;
 
 			a {
 				color:#fff;
