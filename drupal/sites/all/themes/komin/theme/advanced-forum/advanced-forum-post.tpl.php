@@ -65,9 +65,6 @@
 
   <div class="forum-post-wrapper box-content body-copy">
     <div class="forum-post-panel-sub">
-        <div class="avatar">
-          <img src="https://webapps06.malmo.se/avatars/<?php print $account->name;?>/small_quadrat.jpg" alt="">
-        </div>
       <?php if (!empty($author_pane)): ?>
         <?php print $author_pane; ?>
       <?php endif; ?>

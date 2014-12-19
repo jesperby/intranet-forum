@@ -491,16 +491,16 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
   $context = $variables['context'];
 
   $account = user_load($context->uid);
-  if (empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
+  if (empty($account->field_field_display_name[LANGUAGE_NONE][0]['value'])) {
     $name = $account->name;
   }
   else {
-    $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
+    $name = $account->field_field_display_name[LANGUAGE_NONE][0]['value'];
   }
-  $picture = theme('user_picture', array('account' => $account));
+  $picture = 'https://webapps06.malmo.se/avatars/'.$account->name.'/small_quadrat.jpg';
 
   return
-    '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '">' . $name . '</a>' . $picture
+     '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '"> <div class="avatar"><img src="'. $picture .'" alt=""></div>' . $name . '</a>' . ' ' /* $picture */
     . '</div>';
 }
 
