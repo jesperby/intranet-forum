@@ -492,17 +492,13 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
 
   $account = user_load($context->uid);
 
-  if(!empty($account->field_fname[LANGUAGE_NONE][0]['value']) && !empty($account->field_lname[LANGUAGE_NONE][0]['value'])){
-    $name = $account->field_fname[LANGUAGE_NONE][0]['value'] . ' ' . $account->field_lname[LANGUAGE_NONE][0]['value'];
-  }
-  elseif (!empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
-    $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
-  }
-  else {
+  if (empty($account->field_field_display_name[LANGUAGE_NONE][0]['value'])) {
     $name = $account->name;
   }
+  else {
+        $name = $account->field_field_display_name[LANGUAGE_NONE][0]['value'];
+  }
   $picture = 'https://webapps06.malmo.se/avatars/'.$account->name.'/small_quadrat.jpg';
-
 
   return
      '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '"> <div class="avatar"><img src="'. $picture .'" alt=""></div>' . $name . '</a>' . ' ' /* $picture */
@@ -533,11 +529,11 @@ function komin_advanced_forum_subforum_list(&$variables) {
  */
 function komin_username($variables) {
   $account = user_load($variables['uid']);
-  if (empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
+  if (empty($account->field_field_display_name[LANGUAGE_NONE][0]['value'])) {
     $name = $account->name;
   }
   else {
-    $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
+    $name = $account->field_field_display_name[LANGUAGE_NONE][0]['value'];
   }
 
   return '<a href="' . komin_get_author_profile_link($account) . '" class="forum-author">' . $name . '</a>';
