@@ -484,11 +484,18 @@ ul.vertical-tabs-list {
 		display: none;
 	}
 }
-.avatar{
-	img {
-		width: 60px;
+.author-pane{
+	a{
+		font-size: 13px;
+		font-family: "OpenSans","Droid Sans","Verdana","DejaVu Sans","Bitstream Vera Sans",sans-serif;
+	}
+	.avatar{
+		img {
+			width: 60px;
+		}
 	}
 }
+
 .breadcrumb {
 	visibility: hidden;
 	& > a {

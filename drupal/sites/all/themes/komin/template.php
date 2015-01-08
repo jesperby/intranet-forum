@@ -501,10 +501,11 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
   else {
     $name = $account->name;
   }
-  $picture = theme('user_picture', array('account' => $account));
+  $picture = 'https://webapps06.malmo.se/avatars/'.$account->name.'/small_quadrat.jpg';
+
 
   return
-    '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '">' . $name . '</a>' . $picture
+     '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '"> <div class="avatar"><img src="'. $picture .'" alt=""></div>' . $name . '</a>' . ' ' /* $picture */
     . '</div>';
 }
 
@@ -595,4 +596,21 @@ function komin_status_messages($variables) {
     }
   }
   return $output;
+}
+function komin_breadcrumb($variables) {
+    if (!empty($variables)){
+        $breadcrumb = $variables['breadcrumb'];
+        $check = l(t('Home'), '<front>');
+        $crumbs = '<div class="breadcrumb">';
+
+        foreach($breadcrumb as $nr => $b){
+            if($b == $check){
+                $breadcrumb[$nr] = l(t('Start'),'https://webapps06.malmo.se/dashboard/');
+            }
+            $crumbs .= $breadcrumb[$nr];
+        }
+
+        $crumbs .="</div>";
+        return $crumbs;
+    }
 }
