@@ -491,7 +491,6 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
   $context = $variables['context'];
 
   $account = user_load($context->uid);
-  $name = $account->name;
 
   if(!empty($account->field_fname[LANGUAGE_NONE][0]['value']) && !empty($account->field_lname[LANGUAGE_NONE][0]['value'])){
     $name = $account->field_fname[LANGUAGE_NONE][0]['value'] . ' ' . $account->field_lname[LANGUAGE_NONE][0]['value'];
@@ -499,11 +498,13 @@ function komin_advanced_forum_simple_author_pane(&$variables) {
   elseif (!empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
     $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
   }
-
-  $picture = 'https://webapps06.malmo.se/avatars/'.$account->name.'/small_quadrat.jpg';
+  else {
+    $name = $account->name;
+  }
+  $picture = theme('user_picture', array('account' => $account));
 
   return
-     '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '"> <div class="avatar"><img src="'. $picture .'" alt=""></div>' . $name . '</a>' . ' ' /* $picture */
+    '<div class="author-pane"><a href="' . komin_get_author_profile_link($account) . '">' . $name . '</a>' . $picture
     . '</div>';
 }
 
@@ -531,13 +532,10 @@ function komin_advanced_forum_subforum_list(&$variables) {
  */
 function komin_username($variables) {
   $account = user_load($variables['uid']);
-
-  $name = $account->name;
-
-  if(!empty($account->field_fname[LANGUAGE_NONE][0]['value']) && !empty($account->field_lname[LANGUAGE_NONE][0]['value'])){
-    $name = $account->field_fname[LANGUAGE_NONE][0]['value'] . ' ' . $account->field_lname[LANGUAGE_NONE][0]['value'];
+  if (empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
+    $name = $account->name;
   }
-  elseif (!empty($account->field_display_name[LANGUAGE_NONE][0]['value'])) {
+  else {
     $name = $account->field_display_name[LANGUAGE_NONE][0]['value'];
   }
 
@@ -597,21 +595,4 @@ function komin_status_messages($variables) {
     }
   }
   return $output;
-}
-function komin_breadcrumb($variables) {
-    if (!empty($variables)){
-        $breadcrumb = $variables['breadcrumb'];
-        $check = l(t('Home'), '<front>');
-        $crumbs = '<div class="breadcrumb">';
-
-        foreach($breadcrumb as $nr => $b){
-            if($b == $check){
-                $breadcrumb[$nr] = l(t('Start'),'https://webapps06.malmo.se/dashboard/');
-            }
-            $crumbs .= $breadcrumb[$nr];
-        }
-
-        $crumbs .="</div>";
-        return $crumbs;
-    }
 }
